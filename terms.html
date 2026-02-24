@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — HelpMarq</title>
+<meta name="description" content="HelpMarq Terms of Service. Rules and guidelines for using the platform.">
+<link rel="canonical" href="https://helpmarq.com/terms.html">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: #060611; color: #ddddf0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+:root {
+  --bg: #060611; --surface: #09091a; --surface2: #0c0c20;
+  --border: #131328; --border2: #1c1c36;
+  --blue: #3B5BDB; --blue-h: #4C6EF5;
+  --text: #ddddf0; --muted: #5a5a80; --white: #ffffff;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+h1, h2, h3 { font-family: 'Syne', sans-serif; color: var(--white); }
+p { color: var(--muted); line-height: 1.8; }
+a { color: inherit; text-decoration: none; }
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 500;
+  background: rgba(6,6,17,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { display: flex; align-items: center; height: 60px; }
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 800;
+  color: var(--white); margin-right: auto; letter-spacing: -0.03em;
+}
+.nav-logo-mark {
+  width: 28px; height: 28px; background: var(--blue); border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-mark svg { width: 14px; height: 14px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a { font-size: 13.5px; font-weight: 500; color: var(--muted); padding: 8px 14px; border-radius: 4px; transition: color 0.15s; }
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  margin-left: 10px; background: var(--blue); color: var(--white);
+  font-size: 13.5px; font-weight: 600; padding: 8px 18px;
+  border-radius: 4px; transition: background 0.15s;
+}
+.nav-cta:hover { background: var(--blue-h); }
+
+/* PAGE */
+.legal-page { padding: 72px 0 96px; }
+.legal-breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--muted); margin-bottom: 40px;
+}
+.legal-breadcrumb a { color: var(--muted); transition: color 0.15s; }
+.legal-breadcrumb a:hover { color: var(--white); }
+.legal-breadcrumb svg { width: 12px; height: 12px; stroke: var(--muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.legal-inner { max-width: 680px; }
+.legal-inner h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+.legal-date { font-size: 13px; color: var(--muted); margin-bottom: 52px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.legal-inner h2 { font-size: 18px; font-weight: 700; margin: 40px 0 12px; color: var(--white); }
+.legal-inner p { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+.legal-inner ul { padding-left: 20px; margin-bottom: 14px; }
+.legal-inner li { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 7px; }
+.legal-inner a { color: var(--blue); }
+.legal-inner a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer {
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding: 32px 0;
+}
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-size: 12.5px; color: var(--muted); }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { font-size: 12.5px; color: var(--muted); transition: color 0.15s; }
+.footer-legal a:hover { color: var(--white); }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .legal-page { padding: 48px 0 64px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 14 14"><path d="M7 1l1.5 4.5H13l-3.7 2.7 1.4 4.3L7 9.8l-3.7 2.7 1.4-4.3L1 5.5h4.5z"/></svg>
+        </div>
+        HelpMarq
+      </a>
+      <div class="nav-links">
+        <a href="/#howitworks">How it Works</a>
+        <a href="/#owners">For Projects</a>
+        <a href="/#reviewers">For Reviewers</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+      <a href="https://app.helpmarq.com/signup" class="nav-cta">Get Started Free</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal-page">
+  <div class="container">
+    <div class="legal-inner">
+      <div class="legal-breadcrumb">
+        <a href="/">Home</a>
+        <svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg>
+        <span>Terms of Service</span>
+      </div>
+
+      <h1>Terms of Service</h1>
+      <p class="legal-date">Last updated: March 2026</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By creating an account or using HelpMarq, you agree to these Terms of Service. If you do not agree, do not use the platform. These terms apply to all users — project owners and reviewers alike.</p>
+
+      <h2>2. User Accounts</h2>
+      <p>You must be at least 13 years old to create an account. You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account. Provide accurate information when creating your account and keep it up to date.</p>
+
+      <h2>3. For Project Owners</h2>
+      <ul>
+        <li>You retain full ownership of any project content you submit.</li>
+        <li>By submitting a project, you grant HelpMarq permission to share it with matched reviewers for the purpose of delivering feedback.</li>
+        <li>Do not submit content that violates any laws or infringes on third-party intellectual property rights.</li>
+        <li>Do not submit confidential information that you are not authorized to share outside your organization.</li>
+      </ul>
+
+      <h2>4. For Reviewers</h2>
+      <ul>
+        <li>Provide honest, constructive, and specific feedback on every project you accept.</li>
+        <li>Do not submit low-effort, copy-pasted, or deliberately unhelpful reviews.</li>
+        <li>Do not share project content outside the platform without the project owner's explicit consent.</li>
+        <li>Your reviews, ratings, and XP are tied to your public profile and visible to other users.</li>
+      </ul>
+
+      <h2>5. Prohibited Conduct</h2>
+      <p>You may not use HelpMarq to:</p>
+      <ul>
+        <li>Submit spam, fake reviews, or manipulate the rating or XP system.</li>
+        <li>Harass, abuse, threaten, or discriminate against other users.</li>
+        <li>Attempt to reverse-engineer, scrape, or otherwise compromise the platform's infrastructure.</li>
+        <li>Create multiple accounts to circumvent restrictions or abuse the system.</li>
+        <li>Submit illegal, offensive, defamatory, or rights-infringing content.</li>
+        <li>Impersonate any person or entity.</li>
+      </ul>
+
+      <h2>6. Dispute Resolution</h2>
+      <p>Disputes between project owners and reviewers regarding feedback quality are handled through the platform's built-in dispute system. HelpMarq reserves the right to make final decisions on all platform disputes. To raise a dispute or report a problem, contact <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>The HelpMarq platform, including its design, code, and branding, is owned by HelpMarq. You may not copy, reproduce, or redistribute any part of the platform without written permission. User-submitted content remains the property of the respective users.</p>
+
+      <h2>8. Platform Availability</h2>
+      <p>HelpMarq is currently in beta. We do not guarantee 100% uptime or uninterrupted service. Features may change, be removed, or be added without prior notice during the beta period. We will make reasonable efforts to notify users of significant changes via email.</p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>HelpMarq is provided "as is" without warranties of any kind, express or implied. We are not liable for any indirect, incidental, special, or consequential damages resulting from your use of or inability to use the platform. Our total liability for any claim is limited to the amount you have paid us in the preceding 12 months.</p>
+
+      <h2>10. Indemnification</h2>
+      <p>You agree to indemnify and hold HelpMarq harmless from any claims, damages, or expenses arising from your use of the platform, your violation of these Terms, or your violation of any third-party rights.</p>
+
+      <h2>11. Termination</h2>
+      <p>We reserve the right to suspend or permanently terminate accounts that violate these Terms, at our sole discretion and without prior notice. You may delete your account at any time from your account settings.</p>
+
+      <h2>12. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date and notify active users by email for material changes. Continued use of the platform after changes constitutes acceptance of the updated Terms.</p>
+
+      <h2>13. Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with applicable law. Any disputes will be resolved through the dispute process outlined in Section 6, or through applicable courts if necessary.</p>
+
+      <h2>14. Contact</h2>
+      <p>Questions about these Terms? Contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 HelpMarq. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="mailto:info@helpmarq.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

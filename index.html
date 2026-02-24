@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HelpMarq — Real Feedback from Real People</title>
+<meta name="description" content="Submit your project and get structured, honest feedback from matched reviewers. Websites, apps, pitches, designs, and more. Free during beta.">
+<meta property="og:title" content="HelpMarq — Real Feedback from Real People">
+<meta property="og:description" content="Stop guessing. Start improving. Get structured, multi-perspective feedback on any project.">
+<meta property="og:url" content="https://helpmarq.com">
+<link rel="canonical" href="https://helpmarq.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET & VARIABLES ─── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: #060611;
+  color: #ddddf0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+:root {
+  --bg:        #060611;
+  --surface:   #09091a;
+  --surface2:  #0c0c20;
+  --border:    #131328;
+  --border2:   #1c1c36;
+  --blue:      #3B5BDB;
+  --blue-h:    #4C6EF5;
+  --blue-dim:  rgba(59,91,219,0.10);
+  --blue-dim2: rgba(59,91,219,0.18);
+  --text:      #ddddf0;
+  --muted:     #5a5a80;
+  --muted2:    #3a3a58;
+  --white:     #ffffff;
+  --green:     #12b76a;
+  --head:      'Syne', sans-serif;
+  --body:      'Plus Jakarta Sans', sans-serif;
+  --r:         4px;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* ─── TYPOGRAPHY ─── */
+h1, h2, h3, h4 { font-family: var(--head); line-height: 1.08; letter-spacing: -0.02em; color: var(--white); }
+h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; }
+h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; }
+h3 { font-size: clamp(18px, 2.5vw, 24px); font-weight: 700; }
+h4 { font-size: 15px; font-weight: 700; letter-spacing: 0; }
+p { color: var(--muted); line-height: 1.75; }
+a { color: inherit; text-decoration: none; }
+
+/* ─── LAYOUT ─── */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+/* ─── BUTTONS ─── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--body); font-size: 14px; font-weight: 600;
+  padding: 13px 24px; border-radius: var(--r);
+  border: 1px solid transparent;
+  cursor: pointer; transition: all 0.18s ease; white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.btn-primary {
+  background: var(--blue); color: var(--white);
+  border-color: var(--blue);
+}
+.btn-primary:hover { background: var(--blue-h); border-color: var(--blue-h); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent; color: var(--text);
+  border-color: var(--border2);
+}
+.btn-secondary:hover { border-color: var(--blue); color: var(--white); }
+.btn-ghost {
+  background: transparent; color: var(--muted);
+  border: none; padding: 13px 0;
+}
+.btn-ghost:hover { color: var(--white); }
+.btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ─── LABEL/TAG ─── */
+.label {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--blue);
+  border: 1px solid var(--blue-dim2); background: var(--blue-dim);
+  padding: 5px 12px; border-radius: 2px;
+  margin-bottom: 20px;
+}
+.label svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ─── DIVIDERS ─── */
+hr { border: none; border-top: 1px solid var(--border); }
+.sec-divider { width: 100%; height: 1px; background: var(--border); }
+
+/* ─── SECTION PADDING ─── */
+section { padding: 96px 0; }
+section + section { border-top: 1px solid var(--border); }
+
+/* ─────────────────────────────
+   NAVIGATION
+───────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 500;
+  background: rgba(6,6,17,0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center;
+  height: 60px; gap: 0;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--head); font-size: 17px; font-weight: 800;
+  color: var(--white); margin-right: auto;
+  letter-spacing: -0.03em;
+}
+.nav-logo-mark {
+  width: 28px; height: 28px;
+  background: var(--blue); border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo-mark svg { width: 14px; height: 14px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  font-size: 13.5px; font-weight: 500; color: var(--muted);
+  padding: 8px 14px; border-radius: var(--r);
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-actions { display: flex; align-items: center; gap: 10px; margin-left: 20px; }
+.nav-actions a { font-size: 13.5px; font-weight: 500; color: var(--muted); padding: 8px 14px; transition: color 0.15s; }
+.nav-actions a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--blue); color: var(--white) !important;
+  padding: 8px 18px !important; border-radius: var(--r);
+  font-weight: 600 !important;
+  transition: background 0.15s !important;
+}
+.nav-cta:hover { background: var(--blue-h) !important; color: var(--white) !important; }
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--muted); transition: all 0.2s; }
+.mobile-menu {
+  display: none; position: fixed; top: 60px; left: 0; right: 0;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 16px 24px 24px; z-index: 499;
+  flex-direction: column; gap: 4px;
+}
+.mobile-menu a { display: block; padding: 11px 0; font-size: 15px; font-weight: 500; color: var(--muted); border-bottom: 1px solid var(--border); }
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--white); }
+.mobile-menu.open { display: flex; }
+
+/* ─────────────────────────────
+   HERO
+───────────────────────────── */
+#hero {
+  padding: 88px 0 80px;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle grid texture */
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 56px; align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--green); border: 1px solid rgba(18,183,106,0.25);
+  background: rgba(18,183,106,0.07);
+  padding: 5px 12px; border-radius: 20px; margin-bottom: 24px;
+}
+.hero-badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.hero-title { margin-bottom: 20px; }
+.hero-title span { color: var(--blue); }
+.hero-sub {
+  font-size: 17px; color: var(--muted); line-height: 1.7;
+  max-width: 460px; margin-bottom: 36px; font-weight: 400;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+.hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+.hero-meta {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.hero-meta-item svg { width: 14px; height: 14px; stroke: var(--muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ─── HERO MOCKUP ─── */
+.hero-visual { position: relative; }
+.mockup {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.mockup-bar {
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.mockup-dots { display: flex; gap: 6px; }
+.mockup-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border2); }
+.mockup-title { font-size: 11px; color: var(--muted); margin-left: 8px; font-weight: 500; }
+.mockup-body { padding: 20px; }
+.mockup-section-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+}
+.project-card {
+  background: var(--bg); border: 1px solid var(--border2);
+  border-radius: 6px; padding: 14px 16px; margin-bottom: 16px;
+}
+.project-card-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px;
+}
+.project-card-title { font-size: 13px; font-weight: 700; color: var(--white); font-family: var(--head); }
+.project-card-status {
+  font-size: 10px; font-weight: 600; padding: 3px 8px;
+  border-radius: 2px; background: rgba(59,91,219,0.15); color: var(--blue);
+  border: 1px solid rgba(59,91,219,0.25); white-space: nowrap;
+}
+.project-card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.project-tag {
+  font-size: 10px; padding: 2px 7px; border-radius: 2px;
+  background: var(--surface2); color: var(--muted);
+  border: 1px solid var(--border);
+}
+.project-card-footer { display: flex; align-items: center; justify-content: space-between; }
+.project-stat { font-size: 11px; color: var(--muted); }
+.reviewer-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; background: var(--bg);
+  border: 1px solid var(--border2); border-radius: 6px;
+  margin-bottom: 8px; transition: border-color 0.15s;
+}
+.reviewer-row:hover { border-color: var(--blue); }
+.reviewer-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--blue-dim2); border: 1px solid var(--blue-dim2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: var(--blue);
+  flex-shrink: 0;
+}
+.reviewer-info { flex: 1; min-width: 0; }
+.reviewer-name { font-size: 12px; font-weight: 600; color: var(--text); }
+.reviewer-spec { font-size: 10.5px; color: var(--muted); }
+.reviewer-rating { font-size: 11px; font-weight: 700; color: var(--white); }
+.reviewer-star { color: #f5a623; margin-right: 2px; }
+.reviewer-xp {
+  font-size: 10px; font-weight: 600; padding: 2px 7px;
+  border-radius: 2px; border: 1px solid var(--border);
+  color: var(--muted); margin-left: auto; white-space: nowrap;
+}
+.reviewer-xp.gold { border-color: rgba(245,166,35,0.3); color: #f5a623; background: rgba(245,166,35,0.06); }
+.mockup-divider { height: 1px; background: var(--border); margin: 16px 0; }
+.match-count { font-size: 11px; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+
+/* ─────────────────────────────
+   PROBLEM SECTION
+───────────────────────────── */
+#problem { padding: 80px 0; }
+.problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.problem-card {
+  background: var(--surface); padding: 36px 32px;
+  transition: background 0.2s;
+}
+.problem-card:hover { background: var(--surface2); }
+.problem-icon {
+  width: 40px; height: 40px; border: 1px solid var(--border2);
+  border-radius: var(--r); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.problem-icon svg { width: 18px; height: 18px; stroke: var(--muted); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.problem-title { font-family: var(--head); font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.problem-desc { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.problem-header { text-align: center; margin-bottom: 52px; }
+.problem-header h2 { margin-bottom: 14px; }
+.problem-header p { font-size: 16px; max-width: 480px; margin: 0 auto; }
+
+/* ─────────────────────────────
+   HOW IT WORKS
+───────────────────────────── */
+#howitworks { padding: 88px 0; }
+.steps-header { max-width: 520px; margin-bottom: 60px; }
+.steps-header h2 { margin-bottom: 14px; }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.steps-grid::before {
+  content: '';
+  position: absolute; top: 28px; left: 15%; right: 15%; height: 1px;
+  background: var(--border2); z-index: 0;
+}
+.step {
+  text-align: center; padding: 0 20px; position: relative; z-index: 1;
+}
+.step-num-wrap {
+  width: 56px; height: 56px; margin: 0 auto 20px;
+  border: 1px solid var(--border2); border-radius: 50%;
+  background: var(--surface); display: flex; align-items: center; justify-content: center;
+}
+.step-num {
+  font-family: var(--head); font-size: 18px; font-weight: 800;
+  color: var(--blue);
+}
+.step-icon-wrap {
+  width: 56px; height: 56px; margin: 0 auto 20px;
+  border: 1px solid var(--border2); border-radius: 50%;
+  background: var(--surface); display: flex; align-items: center; justify-content: center;
+}
+.step-icon-wrap svg { width: 20px; height: 20px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.step h4 { font-size: 15px; color: var(--white); margin-bottom: 8px; }
+.step p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+
+/* ─────────────────────────────
+   FOR PROJECT OWNERS
+───────────────────────────── */
+#owners { padding: 88px 0; }
+.split-section {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 72px; align-items: start;
+}
+.split-section.reverse { direction: rtl; }
+.split-section.reverse > * { direction: ltr; }
+.split-left h2 { margin-bottom: 14px; }
+.split-left p { font-size: 15.5px; margin-bottom: 36px; max-width: 440px; }
+.feature-list { display: flex; flex-direction: column; gap: 20px; }
+.feature-item { display: flex; gap: 14px; align-items: flex-start; }
+.feature-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  border: 1px solid var(--border2); border-radius: var(--r);
+  background: var(--surface); display: flex; align-items: center; justify-content: center;
+}
+.feature-icon svg { width: 16px; height: 16px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.feature-item h4 { color: var(--text); margin-bottom: 3px; }
+.feature-item p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+
+/* Right side visual — project types */
+.types-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.type-card {
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 6px; padding: 20px 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.type-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.type-card-icon {
+  width: 36px; height: 36px; background: var(--blue-dim);
+  border: 1px solid var(--blue-dim2); border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.type-card-icon svg { width: 16px; height: 16px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.type-card h4 { font-size: 13.5px; color: var(--white); margin-bottom: 4px; }
+.type-card p { font-size: 12.5px; color: var(--muted); }
+
+/* ─────────────────────────────
+   FOR REVIEWERS
+───────────────────────────── */
+#reviewers { padding: 88px 0; }
+.tier-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-top: 48px;
+}
+.tier-card {
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 6px; padding: 24px 20px;
+  transition: border-color 0.2s;
+}
+.tier-card:hover { border-color: var(--blue); }
+.tier-badge {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 2px;
+  border: 1px solid; display: inline-block; margin-bottom: 14px;
+}
+.tier-bronze { color: #cd7f32; border-color: rgba(205,127,50,0.3); background: rgba(205,127,50,0.07); }
+.tier-silver { color: #a0a0b0; border-color: rgba(160,160,176,0.3); background: rgba(160,160,176,0.07); }
+.tier-gold   { color: #f5a623; border-color: rgba(245,166,35,0.3); background: rgba(245,166,35,0.07); }
+.tier-plat   { color: #00d4ff; border-color: rgba(0,212,255,0.3); background: rgba(0,212,255,0.07); }
+.tier-card h4 { font-size: 14px; color: var(--white); margin-bottom: 6px; }
+.tier-card p { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+.tier-xp { font-size: 12px; color: var(--muted); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.tier-xp strong { color: var(--text); }
+
+/* ─────────────────────────────
+   TRUST / PLATFORM FEATURES
+───────────────────────────── */
+#trust { padding: 88px 0; }
+.trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 52px; }
+.trust-card {
+  background: var(--surface); padding: 36px 28px;
+  transition: background 0.2s;
+}
+.trust-card:hover { background: var(--surface2); }
+.trust-card-icon {
+  width: 44px; height: 44px;
+  border: 1px solid var(--border2);
+  border-radius: var(--r); background: var(--blue-dim);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.trust-card-icon svg { width: 20px; height: 20px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.trust-card h4 { font-size: 15px; color: var(--white); margin-bottom: 8px; }
+.trust-card p { font-size: 13.5px; color: var(--muted); line-height: 1.75; }
+
+/* ─────────────────────────────
+   TESTIMONIALS
+───────────────────────────── */
+#testimonials { padding: 88px 0; }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+.testi-card {
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 6px; padding: 28px 24px;
+}
+.testi-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+.testi-star { color: #f5a623; font-size: 14px; }
+.testi-text { font-size: 14.5px; color: var(--text); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 10px; }
+.testi-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--blue-dim2); border: 1px solid var(--blue-dim2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: var(--blue);
+}
+.testi-name { font-size: 13px; font-weight: 600; color: var(--white); }
+.testi-role { font-size: 12px; color: var(--muted); }
+
+/* ─────────────────────────────
+   FOUNDING REVIEWER BANNER
+───────────────────────────── */
+#founding {
+  padding: 64px 0;
+  background: var(--surface);
+}
+.founding-inner {
+  border: 1px solid var(--border2);
+  border-radius: 8px; padding: 48px 48px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 40px; align-items: center;
+}
+.founding-inner h2 { margin-bottom: 12px; font-size: clamp(22px, 3vw, 32px); }
+.founding-inner p { font-size: 15px; color: var(--muted); max-width: 480px; }
+.founding-perks { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+.perk {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; color: var(--text); font-weight: 500;
+}
+.perk svg { width: 14px; height: 14px; stroke: var(--blue); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ─────────────────────────────
+   FAQ
+───────────────────────────── */
+#faq { padding: 88px 0; }
+.faq-header { max-width: 480px; margin-bottom: 52px; }
+.faq-header h2 { margin-bottom: 14px; }
+.faq-list { max-width: 720px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none;
+  cursor: pointer; padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px;
+}
+.faq-q-text { font-family: var(--head); font-size: 16px; font-weight: 700; color: var(--text); transition: color 0.15s; }
+.faq-q:hover .faq-q-text { color: var(--white); }
+.faq-icon {
+  width: 20px; height: 20px; flex-shrink: 0;
+  border: 1px solid var(--border2); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.faq-icon svg { width: 10px; height: 10px; stroke: var(--muted); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
+.faq-item.open .faq-icon { background: var(--blue-dim); border-color: var(--blue-dim2); }
+.faq-item.open .faq-icon svg { stroke: var(--blue); transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 0 20px; font-size: 14.5px; color: var(--muted); line-height: 1.8; max-width: 600px; }
+.faq-item.open .faq-a { display: block; }
+
+/* ─────────────────────────────
+   FINAL CTA
+───────────────────────────── */
+#cta {
+  padding: 88px 0;
+  text-align: center;
+}
+.cta-inner { max-width: 600px; margin: 0 auto; }
+.cta-inner h2 { margin-bottom: 16px; }
+.cta-inner p { font-size: 16px; color: var(--muted); margin-bottom: 36px; }
+.cta-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.cta-note { font-size: 12.5px; color: var(--muted); margin-top: 16px; }
+
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
+footer {
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding: 52px 0 32px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 48px;
+}
+.footer-brand { max-width: 260px; }
+.footer-logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--head); font-size: 16px; font-weight: 800;
+  color: var(--white); margin-bottom: 14px;
+}
+.footer-desc { font-size: 13.5px; color: var(--muted); line-height: 1.75; margin-bottom: 18px; }
+.footer-contact { font-size: 13px; color: var(--muted); }
+.footer-contact a { color: var(--muted); transition: color 0.15s; }
+.footer-contact a:hover { color: var(--white); }
+.footer-col h5 {
+  font-family: var(--head); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 16px;
+}
+.footer-col a {
+  display: block; font-size: 13.5px; color: var(--muted);
+  margin-bottom: 10px; transition: color 0.15s;
+}
+.footer-col a:hover { color: var(--white); }
+.footer-bottom {
+  border-top: 1px solid var(--border); padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-size: 12.5px; color: var(--muted); }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { font-size: 12.5px; color: var(--muted); transition: color 0.15s; }
+.footer-legal a:hover { color: var(--white); }
+
+/* ─────────────────────────────
+   LEGAL SECTIONS
+───────────────────────────── */
+.legal-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+}
+.legal-inner { max-width: 720px; }
+.legal-inner h2 { margin-bottom: 8px; }
+.legal-date { font-size: 12.5px; color: var(--muted); margin-bottom: 40px; }
+.legal-inner h3 { font-size: 18px; color: var(--white); margin: 32px 0 10px; }
+.legal-inner p { font-size: 14.5px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+.legal-inner ul { padding-left: 20px; margin-bottom: 14px; }
+.legal-inner li { font-size: 14.5px; color: var(--muted); line-height: 1.8; margin-bottom: 6px; }
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+@media (max-width: 960px) {
+  .hero-inner, .split-section, .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .split-section.reverse { direction: ltr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .steps-grid::before { display: none; }
+  .tier-row { grid-template-columns: 1fr 1fr; }
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .founding-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 26px; }
+  section { padding: 64px 0; }
+  .nav-links, .nav-actions a:not(.nav-cta) { display: none; }
+  .nav-toggle { display: flex; }
+  .problem-grid, .trust-grid { grid-template-columns: 1fr; }
+  .grid-3, .steps-grid { grid-template-columns: 1fr; }
+  .tier-row { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .types-grid { grid-template-columns: 1fr 1fr; }
+  .founding-inner { padding: 32px 24px; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+/* ─── UTILITY ─── */
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 4px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mt-12 { margin-top: 12px; }
+.mt-24 { margin-top: 24px; }
+.mt-48 { margin-top: 48px; }
+.text-blue { color: var(--blue); }
+.text-white { color: var(--white); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-mark">
+          <!-- Star/mark icon -->
+          <svg viewBox="0 0 14 14"><path d="M7 1l1.5 4.5H13l-3.7 2.7 1.4 4.3L7 9.8l-3.7 2.7 1.4-4.3L1 5.5h4.5z"/></svg>
+        </div>
+        HelpMarq
+      </a>
+      <div class="nav-links">
+        <a href="#howitworks">How it Works</a>
+        <a href="#owners">For Projects</a>
+        <a href="#reviewers">For Reviewers</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://app.helpmarq.com/login">Log in</a>
+        <a href="https://app.helpmarq.com/signup" class="nav-cta">Get Started Free</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMobile()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#howitworks" onclick="toggleMobile()">How it Works</a>
+    <a href="#owners" onclick="toggleMobile()">For Project Owners</a>
+    <a href="#reviewers" onclick="toggleMobile()">For Reviewers</a>
+    <a href="#faq" onclick="toggleMobile()">FAQ</a>
+    <a href="https://app.helpmarq.com/login">Log in</a>
+    <a href="https://app.helpmarq.com/signup" style="color:var(--blue);font-weight:600;">Get Started Free →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Free during beta &mdash; Founding reviewer spots open
+        </div>
+        <h1 class="hero-title">
+          Real feedback<br>from <span>real people</span>
+        </h1>
+        <p class="hero-sub">
+          Submit any project &mdash; website, app, pitch, design &mdash; and get <strong>structured, multi-perspective feedback</strong> from matched reviewers. Not guesses. Not vague opinions. Feedback that actually helps you improve.
+        </p>
+        <div class="hero-actions">
+          <a href="https://app.helpmarq.com/signup" class="btn btn-primary">
+            <svg viewBox="0 0 16 16"><path d="M8 2v12M2 8l6-6 6 6"/></svg>
+            Submit Your Project
+          </a>
+          <a href="#reviewers" class="btn btn-secondary">Become a Reviewer</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 14 14"><path d="M7 1a6 6 0 100 12A6 6 0 007 1z"/><path d="M7 4v3l2 2"/></svg>
+            Feedback in 24–48h
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 14 14"><path d="M12 4H2a1 1 0 00-1 1v6a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 00-1-1zM10 4V3a1 1 0 00-1-1H5a1 1 0 00-1 1v1"/></svg>
+            Free to start
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 14 14"><path d="M7 1l2 4 4.5.7-3.2 3.1.8 4.4L7 11.3l-4 2.1.7-4.4L.5 5.7 5 5z"/></svg>
+            Verified reviewers
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform mockup -->
+      <div class="hero-visual">
+        <div class="mockup">
+          <div class="mockup-bar">
+            <div class="mockup-dots">
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+            </div>
+            <div class="mockup-title">app.helpmarq.com &mdash; Review Dashboard</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-section-label">Your Submitted Project</div>
+            <div class="project-card">
+              <div class="project-card-header">
+                <div class="project-card-title">Mobile App Landing Page</div>
+                <div class="project-card-status">Matching</div>
+              </div>
+              <div class="project-card-tags">
+                <span class="project-tag">Design</span>
+                <span class="project-tag">Landing Page</span>
+                <span class="project-tag">Mobile</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="project-stat">3 perspectives requested</span>
+              </div>
+            </div>
+            <div class="mockup-divider"></div>
+            <div class="match-count">4 reviewers matched &mdash; select up to 3</div>
+            <div class="mockup-section-label">Matched Reviewers</div>
+            <div class="reviewer-row">
+              <div class="reviewer-avatar">AK</div>
+              <div class="reviewer-info">
+                <div class="reviewer-name">Alex K.</div>
+                <div class="reviewer-spec">UX Design &middot; 127 reviews</div>
+              </div>
+              <div class="reviewer-rating"><span class="reviewer-star">&#9733;</span>4.9</div>
+              <div class="reviewer-xp gold">Gold</div>
+            </div>
+            <div class="reviewer-row">
+              <div class="reviewer-avatar">SM</div>
+              <div class="reviewer-info">
+                <div class="reviewer-name">Sarah M.</div>
+                <div class="reviewer-spec">SaaS Product &middot; 84 reviews</div>
+              </div>
+              <div class="reviewer-rating"><span class="reviewer-star">&#9733;</span>4.8</div>
+              <div class="reviewer-xp">Silver</div>
+            </div>
+            <div class="reviewer-row">
+              <div class="reviewer-avatar">TN</div>
+              <div class="reviewer-info">
+                <div class="reviewer-name">Tom N.</div>
+                <div class="reviewer-spec">Startup Founder &middot; 41 reviews</div>
+              </div>
+              <div class="reviewer-rating"><span class="reviewer-star">&#9733;</span>4.7</div>
+              <div class="reviewer-xp">Bronze</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PROBLEM ═══════════════════════ -->
+<section id="problem">
+  <div class="container">
+    <div class="problem-header">
+      <div class="label">
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="5"/><path d="M6 4v2M6 8v.5"/></svg>
+        The Problem
+      </div>
+      <h2>Every builder hits the same wall</h2>
+      <p>You finish something. You need honest feedback. Every available option fails you.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg viewBox="0 0 18 18"><path d="M9 2a7 7 0 100 14A7 7 0 009 2z"/><path d="M9 6v4l2.5 2.5"/></svg>
+        </div>
+        <div class="problem-title">Friends are too kind</div>
+        <p class="problem-desc">The people who care about you don't want to hurt your feelings. They say "looks great" instead of telling you what's broken. Polite feedback is useless feedback.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg viewBox="0 0 18 18"><path d="M14 2H4a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2z"/><path d="M8 8h2m-1-1v2"/></svg>
+        </div>
+        <div class="problem-title">Forums give nothing</div>
+        <p class="problem-desc">You post your project online and either get ignored, get a one-word reply, or get advice from someone who's never built anything like yours. No skin in the game.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg viewBox="0 0 18 18"><path d="M9 2l2.09 4.26L16 7.27l-3.5 3.41.83 4.82L9 13.27l-4.33 2.23.83-4.82L2 7.27l4.91-.01z"/></svg>
+        </div>
+        <div class="problem-title">Professional feedback costs too much</div>
+        <p class="problem-desc">Hiring a consultant or a UX agency isn't realistic at early stages. Most founders and creators are left to guess what's wrong until they've already shipped the wrong thing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section id="howitworks">
+  <div class="container">
+    <div class="steps-header">
+      <div class="label">
+        <svg viewBox="0 0 12 12"><path d="M6 1l1.2 3.6H11L8 6.9l1.1 3.5L6 8.3l-3.1 2.1L4 6.9 1 4.6h3.8z"/></svg>
+        How It Works
+      </div>
+      <h2>From submission to insight in 4 steps</h2>
+      <p style="font-size:15px;max-width:420px;margin-top:12px;">No complicated setup. Submit your project and the platform handles the rest.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-icon-wrap">
+          <!-- Upload icon -->
+          <svg viewBox="0 0 20 20"><path d="M10 3v10M5 8l5-5 5 5"/><path d="M3 15h14"/></svg>
+        </div>
+        <h4>Submit Your Project</h4>
+        <p>Upload your project URL, file, or description. Set your focus areas — what kind of feedback you need most.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">
+          <!-- Users icon -->
+          <svg viewBox="0 0 20 20"><circle cx="8" cy="7" r="3"/><path d="M2 18v-1a4 4 0 014-4h4a4 4 0 014 4v1"/><circle cx="15" cy="7" r="2"/><path d="M18 18v-1a3 3 0 00-2-2.8"/></svg>
+        </div>
+        <h4>Get Matched</h4>
+        <p>The platform matches your project with relevant reviewers — experts, practitioners, and everyday users who mirror your real audience.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">
+          <!-- File check icon -->
+          <svg viewBox="0 0 20 20"><path d="M13 2H7a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2z"/><path d="M7 9l2 2 4-4"/></svg>
+        </div>
+        <h4>Receive Feedback</h4>
+        <p>Reviewers deliver structured, multi-perspective feedback through the platform. Rated and reviewed for quality. You can message them directly.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">
+          <!-- Trending up icon -->
+          <svg viewBox="0 0 20 20"><path d="M3 14l5-5 4 4 6-7"/><path d="M14 5h4v4"/></svg>
+        </div>
+        <h4>Improve</h4>
+        <p>Rate your reviewers. Apply the feedback. Track your project iterations over time. Build in public with real direction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOR PROJECT OWNERS ═══════════════════════ -->
+<section id="owners">
+  <div class="container">
+    <div class="split-section">
+      <div class="split-left">
+        <div class="label">
+          <svg viewBox="0 0 12 12"><path d="M2 3h8a1 1 0 011 1v5a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M8 3V2a1 1 0 00-1-1H5a1 1 0 00-1 1v1"/></svg>
+          For Project Owners
+        </div>
+        <h2>Stop guessing.<br>Start improving.</h2>
+        <p>Whether you're a student testing a side project, a founder pre-launch, or a creator looking for honest critique &mdash; HelpMarq gives you feedback that's structured, specific, and actionable.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+            </div>
+            <div>
+              <h4>Fast turnaround</h4>
+              <p>Receive detailed feedback within 24&ndash;48 hours. Not days. Not weeks.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><path d="M8 2a6 6 0 100 12A6 6 0 008 2z"/><path d="M8 6v3l1.5 1.5"/></svg>
+            </div>
+            <div>
+              <h4>Multiple perspectives</h4>
+              <p>Get feedback from 3 different reviewer types simultaneously &mdash; expert, practitioner, and end-user perspective.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><path d="M13 5H3a1 1 0 00-1 1v5a1 1 0 001 1h10a1 1 0 001-1V6a1 1 0 00-1-1z"/><path d="M5 5V4a1 1 0 011-1h4a1 1 0 011 1v1"/></svg>
+            </div>
+            <div>
+              <h4>Structured format</h4>
+              <p>Reviewers use structured feedback templates. No vague opinions &mdash; every piece of feedback is categorized and specific.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><path d="M2 12s2-2 6-2 6 2 6 2"/><circle cx="8" cy="6" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Reviewer profiles</h4>
+              <p>See the rating, review history, and expertise of every reviewer before selecting them for your project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="split-right">
+        <p class="mb-16" style="font-size:12px;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);font-weight:600;">Submit any type of project</p>
+        <div class="types-grid">
+          <div class="type-card">
+            <div class="type-card-icon">
+              <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1"/><path d="M4 7h8M4 10h5"/></svg>
+            </div>
+            <h4>Websites</h4>
+            <p>Landing pages, portfolios, product sites</p>
+          </div>
+          <div class="type-card">
+            <div class="type-card-icon">
+              <svg viewBox="0 0 16 16"><rect x="4" y="1" width="8" height="14" rx="1"/><path d="M7 12h2"/></svg>
+            </div>
+            <h4>Mobile Apps</h4>
+            <p>UX flows, onboarding, core features</p>
+          </div>
+          <div class="type-card">
+            <div class="type-card-icon">
+              <svg viewBox="0 0 16 16"><path d="M2 2h12v12H2z"/><path d="M5 6h6M5 9h4"/></svg>
+            </div>
+            <h4>Presentations</h4>
+            <p>Pitch decks, proposals, slide design</p>
+          </div>
+          <div class="type-card">
+            <div class="type-card-icon">
+              <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+            </div>
+            <h4>Business Ideas</h4>
+            <p>Concepts, models, market positioning</p>
+          </div>
+          <div class="type-card">
+            <div class="type-card-icon">
+              <svg viewBox="0 0 16 16"><path d="M3 2h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M5 6h6M5 9h4"/></svg>
+            </div>
+            <h4>Designs</h4>
+            <p>UI mockups, brand assets, visual identity</p>
+          </div>
+          <div class="type-card">
+            <div class="type-card-icon">
+              <svg viewBox="0 0 16 16"><path d="M4 2h8l2 3v8a1 1 0 01-1 1H3a1 1 0 01-1-1V5z"/><path d="M4 7h8M4 10h5"/></svg>
+            </div>
+            <h4>Documents</h4>
+            <p>Reports, proposals, written work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOR REVIEWERS ═══════════════════════ -->
+<section id="reviewers">
+  <div class="container">
+    <div class="split-section reverse">
+      <div class="split-left" style="order:2">
+        <div class="label">
+          <svg viewBox="0 0 12 12"><path d="M6 1l1.2 3.6H11L8 6.9l1.1 3.5L6 8.3l-3.1 2.1L4 6.9 1 4.6h3.8z"/></svg>
+          For Reviewers
+        </div>
+        <h2>Build a reputation<br>that compounds.</h2>
+        <p>Give feedback, earn XP, unlock tiers. HelpMarq rewards quality reviewers with visibility, access to better projects, and a profile that demonstrates your expertise over time.</p>
+        <div class="feature-list" style="margin-top:36px">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><path d="M8 1l2 4.5 5 .7-3.5 3.5.8 5L8 12.4 3.7 14.7l.8-5L1 6.2l5-.7z"/></svg>
+            </div>
+            <div>
+              <h4>XP &amp; tier system</h4>
+              <p>Every review earns XP. Progress from Bronze to Silver, Gold, and Platinum as your review count and rating grows.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><path d="M8 2a3 3 0 110 6 3 3 0 010-6z"/><path d="M2 14v-1a4 4 0 018 0v1"/></svg>
+            </div>
+            <div>
+              <h4>Public reviewer profile</h4>
+              <p>Every review you submit is rated by the project owner. Your score, history, and badges are visible on your profile.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 16 16"><rect x="2" y="9" width="4" height="5"/><rect x="6" y="6" width="4" height="8"/><rect x="10" y="3" width="4" height="11"/></svg>
+            </div>
+            <div>
+              <h4>Access grows with rank</h4>
+              <p>Higher-tier reviewers get priority access to more projects and higher-value submissions as the platform grows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="order:1">
+        <div class="tier-row">
+          <div class="tier-card">
+            <div class="tier-badge tier-bronze">Bronze</div>
+            <h4>Getting started</h4>
+            <p>New reviewers. Begin building your review history and establishing your profile.</p>
+            <div class="tier-xp">Starts at <strong>0 XP</strong></div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-badge tier-silver">Silver</div>
+            <h4>Established reviewer</h4>
+            <p>Consistent quality. Access to a wider range of projects and project types.</p>
+            <div class="tier-xp">Unlocks at <strong>500 XP</strong></div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-badge tier-gold">Gold</div>
+            <h4>Trusted expert</h4>
+            <p>High-rated reviews. Priority matching to valuable, complex projects.</p>
+            <div class="tier-xp">Unlocks at <strong>1,500 XP</strong></div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-badge tier-plat">Platinum</div>
+            <h4>Top tier reviewer</h4>
+            <p>Elite status. First access to new features and highest-priority project matching.</p>
+            <div class="tier-xp">Unlocks at <strong>5,000 XP</strong></div>
+          </div>
+        </div>
+        <div style="margin-top:20px;padding:20px 24px;background:var(--surface);border:1px solid var(--border2);border-radius:6px;">
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.75;">No special qualifications required. Whether you're a designer, developer, founder, marketer, or someone who simply uses a lot of products &mdash; your honest perspective is valuable. <strong style="color:var(--text)">Start reviewing today.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TRUST ═══════════════════════ -->
+<section id="trust">
+  <div class="container">
+    <div class="text-center" style="max-width:500px;margin:0 auto 16px">
+      <div class="label">
+        <svg viewBox="0 0 12 12"><path d="M6 1l1 2.5L9.5 4 8 6.5 9 9.5l-3-1.5-3 1.5 1-3L2.5 4 5 3.5z"/></svg>
+        Built on Trust
+      </div>
+      <h2>Quality by design</h2>
+      <p style="font-size:15px;margin-top:12px">Every part of the platform is designed to keep feedback honest, structured, and fair for both sides.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 20 20"><path d="M10 2L3 6v5c0 4 3.5 7 7 8 3.5-1 7-4 7-8V6l-7-4z"/></svg>
+        </div>
+        <h4>Dispute Protection</h4>
+        <p>Clear dispute resolution process for both project owners and reviewers. Platform mediation available for any contested feedback or payment.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 20 20"><path d="M10 2l2.4 5.1 5.6.8-4 3.9 1 5.6L10 14.8l-5 2.6 1-5.6-4-3.9 5.6-.8z"/></svg>
+        </div>
+        <h4>Reviewer Ratings</h4>
+        <p>Every review is rated after delivery. Public rating system ensures accountability and visibility &mdash; quality reviewers rise, poor ones don't get matched.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 20 20"><circle cx="10" cy="8" r="4"/><path d="M3 18v-1a5 5 0 015-5h4a5 5 0 015 5v1"/></svg>
+        </div>
+        <h4>Anti-Abuse Measures</h4>
+        <p>Advanced filtering prevents fake reviews and spam. Identity verification and review pattern analysis keep the platform clean.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 20 20"><path d="M9 3H4a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1v-5"/><path d="M12 3l4 4-7 7H5v-4l7-7z"/></svg>
+        </div>
+        <h4>Structured Feedback</h4>
+        <p>Reviewers work through structured templates. No vague "looks nice" &mdash; every piece of feedback addresses specific, defined areas.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 20 20"><path d="M18 9a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M7 9l2 2 4-4"/></svg>
+        </div>
+        <h4>Quality Control</h4>
+        <p>Top-rated reviewers get priority access to new projects. System rewards consistency and penalizes low-effort or unhelpful reviews.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 20 20"><path d="M4 4h12v12H4z"/><path d="M8 2v2M12 2v2M4 8h12M8 12h1M11 12h1M8 15h1M11 15h1"/></svg>
+        </div>
+        <h4>Transparent Process</h4>
+        <p>Every step visible to both parties. Project owners see reviewer history before matching. Reviewers see clear project briefs before accepting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="text-center" style="max-width:480px;margin:0 auto 16px">
+      <div class="label">
+        <svg viewBox="0 0 12 12"><path d="M3 2H1v4c0 2 1 3 3 4M9 2H7v4c0 2 1 3 3 4"/></svg>
+        Beta Feedback
+      </div>
+      <h2>What beta testers said</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span>
+        </div>
+        <p class="testi-text">"I submitted my landing page and got three completely different perspectives within 24 hours. The structure made it easy to see exactly what to fix first."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MK</div>
+          <div>
+            <div class="testi-name">Marcus K.</div>
+            <div class="testi-role">Indie Founder, Beta Tester</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span>
+        </div>
+        <p class="testi-text">"The reviewer matching was surprisingly good. I needed UX feedback and got matched with someone who actually works in product design. That never happens on forums."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SR</div>
+          <div>
+            <div class="testi-name">Sofia R.</div>
+            <div class="testi-role">Product Designer, Beta Tester</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span>
+        </div>
+        <p class="testi-text">"As a reviewer the XP system keeps me motivated to give better feedback. You can see your profile growing with every review. It feels like it actually means something."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JL</div>
+          <div>
+            <div class="testi-name">James L.</div>
+            <div class="testi-role">Reviewer, Beta Tester</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOUNDING REVIEWER BANNER ═══════════════════════ -->
+<section id="founding" style="padding:64px 0;border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="founding-inner">
+      <div>
+        <div class="label mb-16">
+          <svg viewBox="0 0 12 12"><path d="M6 1l1.2 3.6H11L8 6.9l1.1 3.5L6 8.3l-3.1 2.1L4 6.9 1 4.6h3.8z"/></svg>
+          Launch Special
+        </div>
+        <h2>Become a Founding Reviewer</h2>
+        <p>Sign up as a reviewer before launch and get a permanent Founding Reviewer badge on your profile. Be one of the first names on the platform.</p>
+        <div class="founding-perks">
+          <div class="perk">
+            <svg viewBox="0 0 14 14"><path d="M2 7l4 4 6-7"/></svg>
+            Permanent Founding Reviewer badge
+          </div>
+          <div class="perk">
+            <svg viewBox="0 0 14 14"><path d="M2 7l4 4 6-7"/></svg>
+            Early access to the platform
+          </div>
+          <div class="perk">
+            <svg viewBox="0 0 14 14"><path d="M2 7l4 4 6-7"/></svg>
+            Launch day shoutout
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="https://app.helpmarq.com/signup?role=reviewer" class="btn btn-primary" style="font-size:15px;padding:15px 28px;">
+          <svg viewBox="0 0 16 16"><path d="M8 2a3 3 0 110 6 3 3 0 010-6zM3 14v-1a4 4 0 014-4h2a4 4 0 014 4v1"/></svg>
+          Claim Your Spot
+        </a>
+        <p class="mt-12" style="font-size:12px;color:var(--muted);text-align:center;">Spots are limited. Free to join.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="label">
+        <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="5"/><path d="M5 4.5a1.2 1.2 0 012.2.8c0 .8-1.2 1-1.2 2M6 9v.5"/></svg>
+        FAQ
+      </div>
+      <h2>Common questions</h2>
+      <p style="font-size:15px;margin-top:12px">Everything you need to know before you start.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is HelpMarq really free?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">Yes. HelpMarq is completely free during beta for both project owners and reviewers. No credit card required. This lets you test the platform, give and receive real feedback, and build your reviewer profile before any paid features are introduced.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What kind of projects can I submit?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">Anything you've built or are building. Websites, landing pages, mobile apps, SaaS products, pitch decks, business ideas, design mockups, brand identities, written documents, or any project where you need real feedback. If you're unsure, just submit it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Who are the reviewers?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">Reviewers are a mix of professionals, practitioners, and everyday users. The platform matches your project with reviewers relevant to your category. All reviewers are rated after each review &mdash; low-quality reviewers are filtered out. You can see a reviewer's rating, history, and expertise before selecting them.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How does the reviewer XP and tier system work?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">Every review you submit earns you XP. The amount depends on the complexity of the project and the quality rating given by the project owner. Accumulate enough XP to progress from Bronze → Silver → Gold → Platinum. Higher tiers give you priority access to more projects and better visibility on your profile.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What is a Founding Reviewer badge?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">It's a permanent badge on your reviewer profile given exclusively to people who sign up as reviewers before the platform's official launch date. It marks you as someone who was here from the very beginning. Once the launch window closes, this badge will no longer be available.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How is HelpMarq different from asking for feedback on Reddit or forums?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">On forums, feedback is random, unstructured, and unreliable. Reviewers have no accountability &mdash; they can give a one-line reply and disappear. On HelpMarq, reviewers are rated, matched to your specific project type, and use structured feedback templates. Every review is tied to their public profile and rating. The incentive for quality is built in.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What happens if I'm not satisfied with the feedback I receive?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 10"><path d="M2 5h6M5 2v6"/></svg></span>
+        </button>
+        <div class="faq-a">You can rate the reviewer after delivery. Low ratings directly affect the reviewer's profile and matching priority. During beta, if you receive feedback that is clearly low-effort or off-topic, contact us at info@helpmarq.com and we'll resolve it. A formal dispute resolution process is in place for all future paid reviews.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FINAL CTA ═══════════════════════ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="label" style="margin:0 auto 20px;width:fit-content">
+        <svg viewBox="0 0 12 12"><path d="M2 7l4 4 6-7"/></svg>
+        Get Started
+      </div>
+      <h2>Your next project deserves honest feedback</h2>
+      <p>Stop shipping blind. Get structured, multi-perspective feedback from people who actually have something to say. Free during beta.</p>
+      <div class="cta-actions">
+        <a href="https://app.helpmarq.com/signup" class="btn btn-primary" style="font-size:15px;padding:15px 28px;">
+          <svg viewBox="0 0 16 16"><path d="M8 2v12M2 8l6-6 6 6"/></svg>
+          Submit Your First Project
+        </a>
+        <a href="https://app.helpmarq.com/signup?role=reviewer" class="btn btn-secondary" style="font-size:15px;padding:15px 28px;">
+          Become a Reviewer
+        </a>
+      </div>
+      <p class="cta-note">No credit card. No setup. Takes 2 minutes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-mark" style="width:24px;height:24px;">
+            <svg viewBox="0 0 14 14" style="width:12px;height:12px;stroke:white;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M7 1l1.5 4.5H13l-3.7 2.7 1.4 4.3L7 9.8l-3.7 2.7 1.4-4.3L1 5.5h4.5z"/></svg>
+          </div>
+          HelpMarq
+        </div>
+        <p class="footer-desc">A global review marketplace where project owners get structured, honest feedback from matched reviewers. Built for students, founders, and creators.</p>
+        <div class="footer-contact">
+          <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <a href="https://app.helpmarq.com/signup">Get Started</a>
+        <a href="https://app.helpmarq.com/login">Log In</a>
+        <a href="#howitworks">How It Works</a>
+        <a href="#owners">For Projects</a>
+        <a href="#reviewers">For Reviewers</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="mailto:info@helpmarq.com">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#founding">Founding Reviewers</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 HelpMarq. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="mailto:info@helpmarq.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ PRIVACY POLICY ═══════════════════════ -->
+<section class="legal-section" id="privacy">
+  <div class="container">
+    <div class="legal-inner">
+      <h2>Privacy Policy</h2>
+      <p class="legal-date">Last updated: March 2026</p>
+
+      <h3>1. Information We Collect</h3>
+      <p>When you create an account on HelpMarq, we collect your name, email address, and any profile information you choose to provide. When you submit a project, we collect the project content, description, and any files or URLs you upload. When you submit a review, we collect the review text and any structured feedback data entered through the platform.</p>
+
+      <h3>2. How We Use Your Information</h3>
+      <p>We use your information to operate the platform — matching project owners with reviewers, facilitating feedback delivery, and maintaining user profiles and ratings. We do not sell your data to third parties. We do not use your data for advertising. We may use your email address to send platform notifications (review received, match found) and important account updates.</p>
+
+      <h3>3. Data Storage and Security</h3>
+      <p>Your data is stored on secure cloud infrastructure. We take reasonable technical measures to protect your information from unauthorized access. However, no system is completely secure — please use a strong password and do not share your login credentials.</p>
+
+      <h3>4. Your Rights</h3>
+      <ul>
+        <li>You may request a copy of all data we hold about you at any time.</li>
+        <li>You may request deletion of your account and associated data.</li>
+        <li>You may update your profile information at any time from your account settings.</li>
+        <li>To exercise any of these rights, contact us at info@helpmarq.com.</li>
+      </ul>
+
+      <h3>5. Cookies</h3>
+      <p>We use essential cookies to keep you logged in and maintain platform functionality. We do not use tracking or advertising cookies. You can disable cookies in your browser settings, but this may affect platform functionality.</p>
+
+      <h3>6. Third-Party Services</h3>
+      <p>The platform is hosted on Vercel (frontend) and Render (backend). User authentication uses secure JWT tokens. We do not integrate with third-party analytics or advertising platforms during the beta period.</p>
+
+      <h3>7. Contact</h3>
+      <p>For any privacy-related questions or data requests, contact us at <a href="mailto:info@helpmarq.com" style="color:var(--blue)">info@helpmarq.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TERMS OF SERVICE ═══════════════════════ -->
+<section class="legal-section" id="terms">
+  <div class="container">
+    <div class="legal-inner">
+      <h2>Terms of Service</h2>
+      <p class="legal-date">Last updated: March 2026</p>
+
+      <h3>1. Acceptance of Terms</h3>
+      <p>By creating an account or using HelpMarq, you agree to these Terms of Service. If you do not agree, do not use the platform. These terms apply to all users — project owners and reviewers.</p>
+
+      <h3>2. User Accounts</h3>
+      <p>You must be at least 13 years old to create an account. You are responsible for maintaining the confidentiality of your login credentials. You are responsible for all activity that occurs under your account. Provide accurate information when creating your account.</p>
+
+      <h3>3. For Project Owners</h3>
+      <ul>
+        <li>You retain ownership of any project content you submit.</li>
+        <li>By submitting a project, you grant HelpMarq permission to share it with matched reviewers.</li>
+        <li>Do not submit content that violates any laws or infringes on third-party rights.</li>
+        <li>Do not submit confidential information that you are not authorized to share.</li>
+      </ul>
+
+      <h3>4. For Reviewers</h3>
+      <ul>
+        <li>Provide honest, constructive, and specific feedback.</li>
+        <li>Do not submit low-effort, copy-pasted, or deliberately unhelpful reviews.</li>
+        <li>Do not share project content outside the platform without the project owner's consent.</li>
+        <li>Your reviews, ratings, and XP are tied to your profile and may be visible to other users.</li>
+      </ul>
+
+      <h3>5. Prohibited Conduct</h3>
+      <p>You may not use HelpMarq to:</p>
+      <ul>
+        <li>Submit spam, fake reviews, or manipulate the rating system.</li>
+        <li>Harass, abuse, or threaten other users.</li>
+        <li>Attempt to reverse-engineer, scrape, or otherwise compromise the platform.</li>
+        <li>Create multiple accounts to abuse the system.</li>
+        <li>Submit illegal, offensive, or infringing content.</li>
+      </ul>
+
+      <h3>6. Dispute Resolution</h3>
+      <p>Disputes between project owners and reviewers regarding feedback quality are handled through the platform's built-in dispute system. HelpMarq reserves the right to make final decisions on all disputes. To raise a dispute or report a problem, contact info@helpmarq.com.</p>
+
+      <h3>7. Platform Availability</h3>
+      <p>HelpMarq is currently in beta. We do not guarantee 100% uptime. Features may change, be removed, or be added without prior notice during the beta period. We will make reasonable efforts to notify users of significant changes via email.</p>
+
+      <h3>8. Limitation of Liability</h3>
+      <p>HelpMarq is provided "as is" without warranties of any kind. We are not liable for any indirect, incidental, or consequential damages resulting from your use of the platform. Our total liability is limited to the amount you have paid us in the last 12 months.</p>
+
+      <h3>9. Termination</h3>
+      <p>We reserve the right to suspend or terminate accounts that violate these terms. You may delete your account at any time from your account settings.</p>
+
+      <h3>10. Contact</h3>
+      <p>Questions about these terms? Contact us at <a href="mailto:info@helpmarq.com" style="color:var(--blue)">info@helpmarq.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ── NAV MOBILE ── */
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+/* ── FAQ ACCORDION ── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ── SCROLL ANIMATIONS ── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.problem-card, .step, .feature-item, .type-card, .tier-card, .trust-card, .testi-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+/* ── SMOOTH SCROLL FOR ANCHOR LINKS ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
