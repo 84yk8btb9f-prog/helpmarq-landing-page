@@ -147,9 +147,8 @@ nav{position:sticky;top:0;z-index:500;background:rgba(12,12,12,.95);backdrop-fil
 .how-hd h2{margin-bottom:0}
 .how-hd p{font-size:15px;line-height:1.72}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line2)}
-.st{padding:34px 26px 34px 0;border-right:1px solid var(--line2)}
-.st:first-child{padding-left:0}
-.st:last-child{border-right:none;padding-right:0}
+.st{padding:34px 26px;border-right:1px solid var(--line2);position:relative;overflow:visible;cursor:default}
+.st:last-child{border-right:none}
 .st-n{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dimmer);margin-bottom:22px;display:flex;align-items:center;gap:10px}
 .st-n::after{content:'';flex:1;height:1px;background:var(--line2)}
 .st-ic{width:38px;height:38px;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
@@ -319,13 +318,38 @@ footer{background:var(--s1);border-top:1px solid var(--line);padding:52px 0 28px
   .pc{border-right:none;border-bottom:1px solid var(--line2)}
   .pc:last-child{border-bottom:none}
   .steps{grid-template-columns:1fr}
-  .st{border-right:none;border-bottom:1px solid var(--line2);padding-right:0}
+  .st{border-right:none;border-bottom:1px solid var(--line2)}
   .st:last-child{border-bottom:none}
   .tiers{grid-template-columns:1fr 1fr}
   .tr:nth-child(odd){border-right:1px solid var(--line2)}
   .types{grid-template-columns:1fr 1fr}
   .fo-w{padding:28px 24px}
   .ft-g{grid-template-columns:1fr}
+}
+
+
+/* SABER HOVER */
+.st::before,.st::after{content:'';position:absolute;border-radius:0;pointer-events:none;opacity:0;transition:opacity .3s}
+.st::before{inset:0;background:transparent;border:1.5px solid transparent}
+.st:hover::before{opacity:1}
+.st .saber{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;z-index:2}
+.st:hover .saber{opacity:1}
+.st .saber svg{position:absolute;top:0;left:0;width:100%;height:100%;overflow:visible}
+.st .saber svg rect{
+  fill:none;stroke:rgba(180,180,255,0.55);stroke-width:1.5;
+  stroke-dasharray:900;stroke-dashoffset:900;
+  filter:drop-shadow(0 0 4px rgba(100,140,255,0.7)) drop-shadow(0 0 10px rgba(100,140,255,0.3));
+  animation:none;
+}
+.st:hover .saber svg rect{
+  animation:saber-draw 1.2s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes saber-draw{
+  0%{stroke-dashoffset:900;opacity:0}
+  8%{opacity:1}
+  60%{stroke-dashoffset:0;opacity:1}
+  85%{stroke-dashoffset:0;opacity:.6}
+  100%{stroke-dashoffset:0;opacity:.4}
 }
 
 /* REVEAL */
@@ -455,25 +479,25 @@ footer{background:var(--s1);border-top:1px solid var(--line);padding:52px 0 28px
       <p>No complicated setup. Submit your project and the platform handles the rest.</p>
     </div>
     <div class="steps up">
-      <div class="st">
+      <div class="st"><div class="saber"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="1" y="1" width="98" height="98" rx="0"/></svg></div>
         <div class="st-n">01</div>
         <div class="st-ic"><svg viewBox="0 0 16 16"><path d="M8 3v8M4 7l4-4 4 4"/><path d="M2 13h12"/></svg></div>
         <h4>Submit your project</h4>
         <p>Upload your project URL, file, or description. Set your focus areas and the kind of feedback you need most.</p>
       </div>
-      <div class="st">
+      <div class="st"><div class="saber"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="1" y="1" width="98" height="98" rx="0"/></svg></div>
         <div class="st-n">02</div>
         <div class="st-ic"><svg viewBox="0 0 16 16"><circle cx="6" cy="6" r="3"/><path d="M2 14v-1a3.5 3.5 0 013.5-3.5h1A3.5 3.5 0 0110 13v1"/><circle cx="12" cy="6" r="2"/><path d="M14 14v-.5a2.5 2.5 0 00-1.5-2.3"/></svg></div>
         <h4>Get matched</h4>
         <p>The platform matches your project with relevant reviewers — experts, practitioners, and everyday users who mirror your real audience.</p>
       </div>
-      <div class="st">
+      <div class="st"><div class="saber"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="1" y="1" width="98" height="98" rx="0"/></svg></div>
         <div class="st-n">03</div>
         <div class="st-ic"><svg viewBox="0 0 16 16"><path d="M12 2H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1z"/><path d="M5.5 8l2 2 3-3.5"/></svg></div>
         <h4>Receive feedback</h4>
         <p>Reviewers deliver structured, multi-perspective feedback through the platform. Rated and reviewed for quality on every submission.</p>
       </div>
-      <div class="st">
+      <div class="st"><div class="saber"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="1" y="1" width="98" height="98" rx="0"/></svg></div>
         <div class="st-n">04</div>
         <div class="st-ic"><svg viewBox="0 0 16 16"><path d="M2 12l4-4 3 3 5-6"/><path d="M12 4h3v3"/></svg></div>
         <h4>Improve</h4>
