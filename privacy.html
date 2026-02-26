@@ -4,183 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — HelpMarq</title>
-<meta name="description" content="HelpMarq Privacy Policy. How we collect, use, and protect your data.">
 <link rel="canonical" href="https://helpmarq.com/privacy.html">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  background: #060611; color: #ddddf0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 400; line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-:root {
-  --bg: #060611; --surface: #09091a; --surface2: #0c0c20;
-  --border: #131328; --border2: #1c1c36;
-  --blue: #3B5BDB; --blue-h: #4C6EF5;
-  --text: #ddddf0; --muted: #9090b0; --white: #ffffff;
-}
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
-
-h1, h2, h3 { font-family: 'Syne', sans-serif; color: var(--white); }
-p { color: var(--muted); line-height: 1.8; }
-a { color: inherit; text-decoration: none; }
-
-.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-
-/* NAV */
-nav {
-  position: sticky; top: 0; z-index: 500;
-  background: rgba(6,6,17,0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-inner { display: flex; align-items: center; height: 60px; }
-.nav-logo {
-  display: flex; align-items: center; gap: 10px;
-  font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 800;
-  color: var(--white); margin-right: auto; letter-spacing: -0.03em;
-}
-.nav-logo-mark {
-  width: 28px; height: 28px; background: var(--blue); border-radius: 5px;
-  display: flex; align-items: center; justify-content: center;
-}
-.nav-logo-mark svg { width: 14px; height: 14px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-.nav-links { display: flex; align-items: center; gap: 4px; }
-.nav-links a { font-size: 13.5px; font-weight: 500; color: var(--muted); padding: 8px 14px; border-radius: 4px; transition: color 0.15s; }
-.nav-links a:hover { color: var(--white); }
-.nav-cta {
-  margin-left: 10px; background: var(--blue); color: var(--white);
-  font-size: 13.5px; font-weight: 600; padding: 8px 18px;
-  border-radius: 4px; transition: background 0.15s;
-}
-.nav-cta:hover { background: var(--blue-h); }
-
-/* PAGE */
-.legal-page { padding: 72px 0 96px; }
-.legal-breadcrumb {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 13px; color: var(--muted); margin-bottom: 40px;
-}
-.legal-breadcrumb a { color: var(--muted); transition: color 0.15s; }
-.legal-breadcrumb a:hover { color: var(--white); }
-.legal-breadcrumb svg { width: 12px; height: 12px; stroke: var(--muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.legal-inner { max-width: 680px; }
-.legal-inner h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
-.legal-date { font-size: 13px; color: var(--muted); margin-bottom: 52px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-.legal-inner h2 { font-size: 18px; font-weight: 700; margin: 40px 0 12px; color: var(--white); }
-.legal-inner p { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
-.legal-inner ul { padding-left: 20px; margin-bottom: 14px; }
-.legal-inner li { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 7px; }
-.legal-inner a { color: var(--blue); }
-.legal-inner a:hover { text-decoration: underline; }
-
-/* FOOTER */
-footer {
-  background: var(--surface); border-top: 1px solid var(--border);
-  padding: 32px 0;
-}
-.footer-bottom {
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 12px;
-}
-.footer-copy { font-size: 12.5px; color: var(--muted); }
-.footer-legal { display: flex; gap: 20px; }
-.footer-legal a { font-size: 12.5px; color: var(--muted); transition: color 0.15s; }
-.footer-legal a:hover { color: var(--white); }
-
-@media (max-width: 640px) {
-  .nav-links { display: none; }
-  .legal-page { padding: 48px 0 64px; }
-}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0c0c0c;color:#c2c2c2;font-family:'DM Sans',sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+:root{--bg:#0c0c0c;--s1:#111111;--line:#222222;--line2:#2c2c2c;--white:#efefef;--dim:#888888;--dimmer:#555555;--accent:#4265f0}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--line2)}
+h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;color:var(--white);line-height:1.08;letter-spacing:-.01em}
+h1{font-size:clamp(32px,5vw,52px);font-weight:400}
+h2{font-size:20px;font-weight:400;margin:36px 0 12px}
+p{color:var(--dim);line-height:1.8;margin-bottom:14px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:500;background:rgba(12,12,12,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-i{display:flex;align-items:center;height:56px}
+.nav-logo{display:flex;align-items:center;margin-right:auto;overflow:hidden}
+.nav-logo img{height:76px;width:auto;object-fit:contain;margin:-12px -8px;flex-shrink:0}
+.nav-logo-t{font-family:'Instrument Serif',serif;font-size:18px;color:var(--white);letter-spacing:-.02em;margin-left:-2px}
+.nav-l{display:flex}
+.nav-l a{font-size:13px;color:var(--dimmer);padding:8px 13px;transition:color .14s}
+.nav-l a:hover{color:var(--white)}
+.nav-cta{margin-left:18px;background:var(--white);color:#0c0c0c;font-size:13px;font-weight:600;padding:7px 16px;transition:background .14s}
+.nav-cta:hover{background:#d8d8d8}
+main{padding:72px 0 96px}
+.pg-inner{max-width:680px}
+.bc{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--dimmer);margin-bottom:36px}
+.bc a{color:var(--dimmer);transition:color .14s}
+.bc a:hover{color:var(--white)}
+.bc svg{width:11px;height:11px;stroke:var(--dimmer);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+h1{margin-bottom:6px}
+.dt{font-size:12px;color:var(--dimmer);margin-bottom:0;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.pg-inner ul{padding-left:20px;margin-bottom:14px}
+.pg-inner li{font-size:15px;color:var(--dim);line-height:1.8;margin-bottom:7px}
+.pg-inner a{color:var(--accent)}
+.pg-inner a:hover{text-decoration:underline}
+footer{background:var(--s1);border-top:1px solid var(--line);padding:28px 0}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.ft-copy{font-size:12px;color:var(--dimmer)}
+.ft-leg{display:flex;gap:18px}
+.ft-leg a{font-size:12px;color:var(--dimmer);transition:color .14s}
+.ft-leg a:hover{color:var(--white)}
+@media(max-width:640px){.nav-l{display:none}}
 </style>
 </head>
 <body>
-
-<nav>
-  <div class="container">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="/logo.png" alt="HelpMarq logo" style="height:110px;width:auto;object-fit:contain;margin:-25px -12px;flex-shrink:0;">
-        HelpMarq
-      </a>
-      <div class="nav-links">
-        <a href="/#howitworks">How it Works</a>
-        <a href="/#owners">For Projects</a>
-        <a href="/#reviewers">For Reviewers</a>
-        <a href="/#faq">FAQ</a>
-      </div>
-      <a href="https://app.helpmarq.com/signup" class="nav-cta">Get Started Free</a>
-    </div>
-  </div>
-</nav>
-
-<main class="legal-page">
-  <div class="container">
-    <div class="legal-inner">
-      <div class="legal-breadcrumb">
-        <a href="/">Home</a>
-        <svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg>
-        <span>Privacy Policy</span>
-      </div>
-
-      <h1>Privacy Policy</h1>
-      <p class="legal-date">Last updated: March 2026</p>
-
-      <h2>1. Information We Collect</h2>
-      <p>When you create an account on HelpMarq, we collect your name, email address, and any profile information you choose to provide. When you submit a project, we collect the project content, description, and any files or URLs you upload. When you submit a review, we collect the review text and any structured feedback data entered through the platform.</p>
-
-      <h2>2. How We Use Your Information</h2>
-      <p>We use your information to operate the platform — matching project owners with reviewers, facilitating feedback delivery, and maintaining user profiles and ratings. We do not sell your data to third parties. We do not use your data for advertising. We may use your email address to send platform notifications (review received, match found) and important account updates.</p>
-
-      <h2>3. Data Storage and Security</h2>
-      <p>Your data is stored on secure cloud infrastructure. We take reasonable technical measures to protect your information from unauthorized access. However, no system is completely secure — please use a strong password and do not share your login credentials.</p>
-
-      <h2>4. Your Rights</h2>
-      <ul>
-        <li>You may request a copy of all data we hold about you at any time.</li>
-        <li>You may request deletion of your account and all associated data.</li>
-        <li>You may update your profile information at any time from your account settings.</li>
-        <li>To exercise any of these rights, contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</li>
-      </ul>
-
-      <h2>5. Cookies</h2>
-      <p>We use essential cookies to keep you logged in and maintain platform functionality. We do not use tracking or advertising cookies. You can disable cookies in your browser settings, but this may affect platform functionality.</p>
-
-      <h2>6. Third-Party Services</h2>
-      <p>The platform is hosted on Vercel (frontend) and Render (backend). User authentication uses secure JWT tokens. We do not integrate with third-party analytics or advertising platforms during the beta period.</p>
-
-      <h2>7. Data Retention</h2>
-      <p>We retain your data for as long as your account is active. If you delete your account, we will remove your personal data within 30 days. Review content may be retained in anonymized form for platform quality purposes.</p>
-
-      <h2>8. Children's Privacy</h2>
-      <p>HelpMarq is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a> and we will delete it promptly.</p>
-
-      <h2>9. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page and notify active users by email for significant changes.</p>
-
-      <h2>10. Contact</h2>
-      <p>For any privacy-related questions or data requests, contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</p>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-bottom">
-      <div class="footer-copy">&copy; 2026 HelpMarq. All rights reserved.</div>
-      <div class="footer-legal">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
-        <a href="mailto:info@helpmarq.com">Contact</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+<nav><div class="wrap"><div class="nav-i">
+  <a href="/" class="nav-logo"><img src="/logo.png" alt="HelpMarq logo"><span class="nav-logo-t">HelpMarq</span></a>
+  <div class="nav-l"><a href="/#how">How it works</a><a href="/#owners">For projects</a><a href="/#revs">For reviewers</a><a href="/#faq">FAQ</a></div>
+  <a href="https://app.helpmarq.com/signup" class="nav-cta">Get started free</a>
+</div></div></nav>
+<main><div class="wrap"><div class="pg-inner">
+  <div class="bc"><a href="/">Home</a><svg viewBox="0 0 11 11"><path d="M3.5 2l4 3.5-4 3.5"/></svg><span>Privacy Policy</span></div>
+  <h1>Privacy Policy</h1>
+  <p class="dt">Last updated: March 2026</p>
+  <h2>1. Information We Collect</h2>
+  <p>When you create an account on HelpMarq, we collect your name, email address, and any profile information you choose to provide. When you submit a project, we collect the project content, description, and any files or URLs you upload. When you submit a review, we collect the review text and any structured feedback data entered through the platform.</p>
+  <h2>2. How We Use Your Information</h2>
+  <p>We use your information to operate the platform — matching project owners with reviewers, facilitating feedback delivery, and maintaining user profiles and ratings. We do not sell your data to third parties. We do not use your data for advertising. We may use your email address to send platform notifications and important account updates.</p>
+  <h2>3. Data Storage and Security</h2>
+  <p>Your data is stored on secure cloud infrastructure. We take reasonable technical measures to protect your information from unauthorized access. However, no system is completely secure — please use a strong password and do not share your login credentials.</p>
+  <h2>4. Your Rights</h2>
+  <ul>
+    <li>You may request a copy of all data we hold about you at any time.</li>
+    <li>You may request deletion of your account and all associated data.</li>
+    <li>You may update your profile information at any time from your account settings.</li>
+    <li>To exercise any of these rights, contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</li>
+  </ul>
+  <h2>5. Cookies</h2>
+  <p>We use essential cookies to keep you logged in and maintain platform functionality. We do not use tracking or advertising cookies. You can disable cookies in your browser settings, but this may affect platform functionality.</p>
+  <h2>6. Third-Party Services</h2>
+  <p>The platform is hosted on Vercel (frontend) and Render (backend). User authentication uses secure JWT tokens. We do not integrate with third-party analytics or advertising platforms during the beta period.</p>
+  <h2>7. Data Retention</h2>
+  <p>We retain your data for as long as your account is active. If you delete your account, we will remove your personal data within 30 days. Review content may be retained in anonymized form for platform quality purposes.</p>
+  <h2>8. Children's Privacy</h2>
+  <p>HelpMarq is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</p>
+  <h2>9. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we do, we will update the date at the top and notify active users by email for significant changes.</p>
+  <h2>10. Contact</h2>
+  <p>For any privacy-related questions or data requests, contact us at <a href="mailto:info@helpmarq.com">info@helpmarq.com</a>.</p>
+</div></div></main>
+<footer><div class="wrap"><div class="ft-bot">
+  <span class="ft-copy">&copy; 2026 HelpMarq. All rights reserved.</span>
+  <div class="ft-leg"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="mailto:info@helpmarq.com">Contact</a></div>
+</div></div></footer>
 </body>
 </html>
