@@ -1,0 +1,96 @@
+# HelpMarq
+
+> HelpMarq is a feedback marketplace where project owners get structured, honest feedback from matched reviewers within 48 hours. Free during beta — no credit card required.
+
+## What is HelpMarq?
+
+HelpMarq is a platform where builders, founders, students, and creators submit any project — websites, apps, pitch decks, designs, business ideas, documents — and receive structured, multi-perspective feedback from matched reviewers.
+
+Reviewers are matched to projects by category and expertise. They deliver feedback through structured templates, ensuring responses are specific and actionable rather than vague opinions. Every reviewer has a public rated profile.
+
+## Core problem HelpMarq solves
+
+Most builders cannot get honest, structured feedback on their work:
+- Friends are too kind and say "looks great" instead of pointing out real issues
+- Forums (Reddit, communities) give random, unstructured, unaccountable responses
+- Hiring consultants costs $100–500/hour and is unrealistic for early-stage projects
+
+HelpMarq provides a structured alternative: matched, rated, accountable reviewers delivering templated feedback within 48 hours.
+
+## How it works
+
+1. **Submit** — Upload a URL, file, or description. Add focus areas.
+2. **Get matched** — The platform matches the project with relevant reviewers: experts, practitioners, and everyday users who mirror the real target audience.
+3. **Receive feedback** — Reviewers deliver structured feedback within 48 hours through rated templates.
+4. **Improve** — Rate reviewers, apply feedback, iterate.
+
+## Who is it for?
+
+**Project owners**: Students, indie founders, SaaS builders, designers, creators who need real feedback before shipping. Anyone who wants to validate a project without guessing.
+
+**Reviewers**: Professionals and practitioners who want to build a public reputation and earn XP by giving structured feedback on real projects.
+
+## Project types accepted
+
+Websites, landing pages, mobile apps, SaaS products, pitch decks, business ideas, design mockups, brand identities, written documents, presentations.
+
+## Reviewer tier system
+
+Reviewers earn XP for each review based on project complexity and quality rating from the project owner.
+
+- **Bronze** — 0 XP — Starting tier
+- **Silver** — 500 XP — Access to wider project range
+- **Gold** — 1,500 XP — Priority matching to high-value projects
+- **Platinum** — 5,000 XP — Elite status, first access to new features
+
+Higher-tier reviewers get priority matching to better projects. The system rewards quality and consistency.
+
+## Key differentiators vs alternatives
+
+| Feature | HelpMarq | Reddit/Forums | Friends | Consultants |
+|---|---|---|---|---|
+| Structured format | Always | Never | Never | Sometimes |
+| Reviewer accountability | Rated profiles | Anonymous | None | Contract only |
+| Multiple perspectives | 3 reviewer types | Random | Biased | Single view |
+| 48-hour turnaround | Guaranteed | No | No | Depends |
+| Matched to project type | Smart matching | None | None | You find them |
+| Cost | Free in beta | Free | Free | $100–500+/hr |
+
+## Founding Reviewer program
+
+Early users who sign up before the official launch date receive a permanent "Founding Reviewer" badge on their profile. This badge is exclusive and will not be available after the launch window closes.
+
+## Company information
+
+- **Product**: HelpMarq — Feedback Marketplace
+- **Founded**: 2026
+- **Founder**: Nikolas Sapalidis
+- **Website**: https://helpmarq.com
+- **App**: https://app.helpmarq.com
+- **Contact**: info@helpmarq.com
+- **Status**: Beta (free, no credit card required)
+
+## Key URLs
+
+- [Get started free](https://app.helpmarq.com/signup)
+- [Log in](https://app.helpmarq.com/login)
+- [Become a reviewer](https://app.helpmarq.com/signup?role=reviewer)
+- [Privacy Policy](https://helpmarq.com/privacy.html)
+- [Terms of Service](https://helpmarq.com/terms.html)
+
+## Frequently asked questions
+
+**Is HelpMarq free?**
+Yes. Completely free during beta for both owners and reviewers. No credit card required.
+
+**What projects can be submitted?**
+Websites, apps, pitch decks, business ideas, design mockups, documents — anything a builder has created.
+
+**How fast is feedback delivered?**
+Within 48 hours of reviewer matching.
+
+**Who reviews projects?**
+A mix of professionals, practitioners, and everyday users matched by project category.
+
+**How is this different from forums?**
+Reviewers are rated, matched by category, and use structured templates. Their public profile is at stake with every review.
