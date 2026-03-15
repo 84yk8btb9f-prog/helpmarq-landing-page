@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://helpmarq.com/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <loc>https://helpmarq.com</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dlg1s3jcy/image/upload/v1772295463/helpmarq-og_agfn52.png</image:loc>
+      <image:title>HelpMarq — Get honest feedback on any project</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://helpmarq.com/privacy.html</loc>
