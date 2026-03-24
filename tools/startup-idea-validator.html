@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Startup Idea Validator — Score Your Idea in 3 Minutes — HelpMarq</title>
+<meta name="description" content="12-question scorecard that tells you how strong your startup idea really is. Covers problem, market, solution, and founder fit. Free, instant results.">
+<meta name="keywords" content="startup idea validation, how to validate startup idea free, startup idea validator, is my startup idea good, startup idea checker, idea validation tool">
+<meta name="author" content="HelpMarq">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://helpmarq.com/tools/startup-idea-validator.html">
+<meta property="og:title" content="Free Startup Idea Validator — Score Your Idea in 3 Minutes">
+<meta property="og:description" content="12-question scorecard covering problem, market, solution, and founder fit. Get an honest score on your startup idea instantly.">
+<meta property="og:url" content="https://helpmarq.com/tools/startup-idea-validator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HelpMarq">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Startup Idea Validator — HelpMarq">
+<meta name="twitter:description" content="Score your startup idea in 3 minutes across 4 dimensions.">
+<meta name="twitter:site" content="@nikolassapa">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" crossorigin="anonymous">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"Startup Idea Validator","url":"https://helpmarq.com/tools/startup-idea-validator.html","description":"A free 12-question scorecard that evaluates your startup idea across problem, market, solution, and founder fit. Get an instant score with interpretation.","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"publisher":{"@type":"Organization","name":"HelpMarq","url":"https://helpmarq.com"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://helpmarq.com"},{"@type":"ListItem","position":2,"name":"Free Tools","item":"https://helpmarq.com/tools/"},{"@type":"ListItem","position":3,"name":"Startup Idea Validator","item":"https://helpmarq.com/tools/startup-idea-validator.html"}]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0c0c0c;--s1:#111;--s2:#171717;--s3:#1d1d1d;--line:#202020;--line2:#2a2a2a;--white:#f0f0f0;--dim:#888;--dimmer:#4a4a4a;--accent:#e8943a;--accent-dim:rgba(232,148,58,.12);--green:#4caf7d;--green-dim:rgba(76,175,125,.12);--yellow:#d4af37;--yellow-dim:rgba(212,175,55,.12)}
+html{font-size:16px;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--dim);font-family:'Outfit',sans-serif;line-height:1.7;min-height:100vh}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{color:var(--white);line-height:1.1;letter-spacing:-.025em;font-weight:700}
+p{color:var(--dim);line-height:1.78}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--line2)}
+
+nav{position:sticky;top:0;z-index:500;background:rgba(12,12,12,.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding:0 28px}
+.nav-in{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--white);letter-spacing:-.03em}
+.nav-brand img{width:28px;height:28px}
+.nav-back{font-size:13px;color:var(--dimmer);transition:color .14s}.nav-back:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:#0c0c0c;font-size:13px;font-weight:700;padding:7px 16px;transition:background .14s}.nav-cta:hover{background:#d4832e}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 28px}
+.page-hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.eyebrow{display:block;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--dimmer);margin-bottom:16px}
+.page-hero h1{font-size:clamp(32px,5vw,52px);margin-bottom:16px}
+.page-hero p{font-size:17px;max-width:560px}
+
+/* Score bar */
+.score-bar{position:sticky;top:56px;z-index:400;background:rgba(12,12,12,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 28px}
+.score-in{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.score-num{font-size:22px;font-weight:800;color:var(--dimmer);letter-spacing:-.03em;transition:color .3s}
+.score-num.warn{color:var(--yellow)}.score-num.good{color:var(--accent)}.score-num.great{color:var(--green)}
+.score-track{flex:1;height:4px;background:var(--line2);min-width:80px;max-width:200px}
+.score-fill{height:4px;background:var(--dimmer);width:0%;transition:width .3s, background .3s}
+.score-fill.warn{background:var(--yellow)}.score-fill.good{background:var(--accent)}.score-fill.great{background:var(--green)}
+.score-msg{font-size:12px;color:var(--dimmer);text-align:right;min-width:180px}
+@media(max-width:560px){.score-track,.score-msg{display:none}}
+
+/* Questions */
+.tool-section{padding:48px 0 80px}
+.category{margin-bottom:44px}
+.category-hd{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.category-hd h2{font-size:18px;letter-spacing:-.01em}
+.cat-count{font-size:12px;font-weight:600;color:var(--dimmer);background:var(--s2);border:1px solid var(--line2);padding:3px 8px}
+.q-list{display:flex;flex-direction:column;gap:12px}
+.q-item{background:var(--s1);border:1px solid var(--line);padding:16px}
+.q-text{font-size:14px;font-weight:600;color:var(--white);margin-bottom:12px}
+.q-options{display:flex;gap:8px}
+.q-opt{flex:1;background:transparent;border:1px solid var(--line2);color:var(--dimmer);font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;padding:8px 4px;cursor:pointer;transition:all .15s;text-align:center}
+.q-opt:hover{border-color:var(--dimmer);color:var(--white)}
+.q-opt.sel-1{background:rgba(180,60,60,.15);border-color:rgba(180,60,60,.4);color:#e07070}
+.q-opt.sel-2{background:var(--yellow-dim);border-color:rgba(212,175,55,.4);color:var(--yellow)}
+.q-opt.sel-3{background:var(--green-dim);border-color:rgba(76,175,125,.4);color:var(--green)}
+@media(max-width:480px){.q-opt{font-size:11px;padding:7px 2px}}
+
+/* Result */
+.result-block{display:none;margin-top:40px;border-top:1px solid var(--line);padding-top:40px}
+.result-block.visible{display:block}
+.result-inner{background:var(--s1);border:1px solid var(--line2);padding:32px}
+.result-score{font-size:48px;font-weight:800;letter-spacing:-.04em;color:var(--white);margin-bottom:4px}
+.result-label{font-size:16px;font-weight:600;margin-bottom:12px}
+.result-label.bad{color:#e07070}.result-label.warn{color:var(--yellow)}.result-label.good{color:var(--accent)}.result-label.great{color:var(--green)}
+.result-desc{font-size:14px;color:var(--dim);max-width:560px;line-height:1.7}
+.btn-reset{background:transparent;border:1px solid var(--line2);color:var(--dim);font-family:'Outfit',sans-serif;font-size:13px;padding:8px 18px;cursor:pointer;transition:all .15s;margin-top:20px}.btn-reset:hover{border-color:var(--dimmer);color:var(--white)}
+
+.cta-block{background:var(--s1);border:1px solid var(--line2);padding:40px;margin-top:48px;text-align:center}
+.cta-block h2{font-size:24px;margin-bottom:10px}
+.cta-block p{font-size:15px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
+.btn-accent{display:inline-block;background:var(--accent);color:#0c0c0c;font-size:15px;font-weight:700;padding:12px 28px;transition:background .15s}.btn-accent:hover{background:#d4832e}
+
+footer{border-top:1px solid var(--line);padding:32px 28px;margin-top:0}
+.ft-in{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-copy{font-size:12px;color:var(--dimmer)}
+.ft-links{display:flex;gap:20px;flex-wrap:wrap}
+.ft-links a{font-size:12px;color:var(--dimmer);transition:color .14s}.ft-links a:hover{color:var(--white)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="/" class="nav-brand">
+      <picture><source srcset="/logo.webp" type="image/webp"><img src="/logo.png" alt="HelpMarq logo" width="28" height="28" loading="lazy"></picture>
+      HelpMarq
+    </a>
+    <div style="display:flex;align-items:center;gap:20px">
+      <a href="/" class="nav-back">← Back to site</a>
+      <a href="https://app.helpmarq.com/signup" class="nav-cta">Get started free</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="eyebrow">Free Tool</span>
+      <h1>Startup Idea Validator</h1>
+      <p>12 questions across four dimensions: problem, market, solution, and founder fit. Answer honestly and get a score that tells you where your idea is strong — and where it isn't.</p>
+    </div>
+  </div>
+
+  <div class="score-bar">
+    <div class="score-in">
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dimmer);margin-bottom:2px">Your score</div>
+        <div class="score-num" id="score-num">0 / 36</div>
+      </div>
+      <div class="score-track"><div class="score-fill" id="score-fill"></div></div>
+      <div class="score-msg" id="score-msg">Answer questions to see your score.</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="tool-section">
+
+      <div class="category">
+        <div class="category-hd"><h2>Problem</h2><span class="cat-count">3 questions</span></div>
+        <div class="q-list">
+          <div class="q-item" data-q="1">
+            <div class="q-text">Do you personally experience this problem?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Somewhat</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="2">
+            <div class="q-text">Can you name 10 real people who have this problem right now?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">A few</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="3">
+            <div class="q-text">Are people already spending time or money trying to solve this problem?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Informally</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-hd"><h2>Market</h2><span class="cat-count">3 questions</span></div>
+        <div class="q-list">
+          <div class="q-item" data-q="4">
+            <div class="q-text">Is the addressable market large enough to support a $1M+ business?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Maybe</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="5">
+            <div class="q-text">Do you know specifically who your first 100 customers are?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Roughly</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="6">
+            <div class="q-text">Is there an existing budget already being spent in this category?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Small</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-hd"><h2>Solution</h2><span class="cat-count">3 questions</span></div>
+        <div class="q-list">
+          <div class="q-item" data-q="7">
+            <div class="q-text">Is your solution meaningfully better than what people do today?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">Slightly</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Better</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Much better</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="8">
+            <div class="q-text">Can you explain what you're building in one clear sentence?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">Not yet</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">With effort</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes, easily</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="9">
+            <div class="q-text">Could you ship a basic working version in under 3 months?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Maybe</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-hd"><h2>Founder fit</h2><span class="cat-count">3 questions</span></div>
+        <div class="q-list">
+          <div class="q-item" data-q="10">
+            <div class="q-text">Do you have relevant domain expertise or close access to it?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Adjacent</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="11">
+            <div class="q-text">Do you have a network that gives you direct access to your target customers?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">No</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Some</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Yes</button>
+            </div>
+          </div>
+          <div class="q-item" data-q="12">
+            <div class="q-text">Are you genuinely willing to work on this problem for 3–5 years?</div>
+            <div class="q-options">
+              <button class="q-opt" data-val="1" onclick="select(this)">Not sure</button>
+              <button class="q-opt" data-val="2" onclick="select(this)">Probably</button>
+              <button class="q-opt" data-val="3" onclick="select(this)">Absolutely</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-block" id="result-block">
+        <div class="result-inner">
+          <div class="result-score" id="result-score">—</div>
+          <div class="result-label" id="result-label"></div>
+          <div class="result-desc" id="result-desc"></div>
+          <button class="btn-reset" onclick="resetAll()">Reset and start over</button>
+        </div>
+      </div>
+
+      <div class="cta-block">
+        <h2>Score is one thing. Real feedback is another.</h2>
+        <p>Submit your startup idea on HelpMarq and get structured, honest feedback from matched reviewers — people with real experience in your space — within 48 hours.</p>
+        <a href="https://app.helpmarq.com/signup" class="btn-accent">Get real feedback on HelpMarq →</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="ft-in">
+    <span class="ft-copy">&copy; 2026 HelpMarq. All rights reserved.</span>
+    <div class="ft-links">
+      <a href="/">Home</a>
+      <a href="/tools/feedback-brief-generator.html">Brief Generator</a>
+      <a href="/tools/landing-page-checklist.html">Landing Page Checklist</a>
+      <a href="/tools/pitch-deck-checklist.html">Pitch Deck Checklist</a>
+      <a href="/tools/value-proposition-builder.html">Value Prop Builder</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var scores = {};
+var RESULTS = [
+  {min:0,  max:12, cls:'bad',  label:'Not ready yet',        desc:'Your idea has significant gaps in one or more of the four dimensions. That\'s not necessarily bad — it means you know where to focus. Go back to the lowest-scoring category and work on that first before building anything.'},
+  {min:13, max:24, cls:'warn', label:'Promising — needs work', desc:'You\'re on to something, but there are real weaknesses to address. Identify the lowest-scoring category and treat it as your most important pre-build task. Talk to more potential customers before writing code.'},
+  {min:25, max:32, cls:'good', label:'Strong — time to validate', desc:'Your idea scores well across most dimensions. The next step isn\'t to build more — it\'s to put your idea in front of real people and collect structured feedback before you commit fully. Validate the assumptions you\'re least sure about.'},
+  {min:33, max:36, cls:'great', label:'Ship it',               desc:'Your idea is well-validated across all four dimensions. You have a real problem, a defined market, a differentiated solution, and the right founder fit. The biggest risk now is waiting too long. Get real feedback and start building.'}
+];
+
+function select(btn) {
+  var item = btn.closest('.q-item');
+  var qNum = item.getAttribute('data-q');
+  item.querySelectorAll('.q-opt').forEach(function(b) {
+    b.classList.remove('sel-1','sel-2','sel-3');
+  });
+  var val = parseInt(btn.getAttribute('data-val'));
+  btn.classList.add('sel-' + val);
+  scores[qNum] = val;
+  updateScore();
+}
+
+function updateScore() {
+  var total = 0;
+  var answered = Object.keys(scores).length;
+  for (var k in scores) total += scores[k];
+  var max = 36;
+  var pct = (total / max) * 100;
+  var numEl = document.getElementById('score-num');
+  var fillEl = document.getElementById('score-fill');
+  var msgEl = document.getElementById('score-msg');
+  numEl.textContent = total + ' / ' + max;
+  fillEl.style.width = pct + '%';
+  numEl.className = 'score-num';
+  fillEl.className = 'score-fill';
+  if (total >= 33) { numEl.classList.add('great'); fillEl.classList.add('great'); }
+  else if (total >= 25) { numEl.classList.add('good'); fillEl.classList.add('good'); }
+  else if (total >= 13) { numEl.classList.add('warn'); fillEl.classList.add('warn'); }
+  if (answered === 0) { msgEl.textContent = 'Answer questions to see your score.'; }
+  else if (answered < 12) { msgEl.textContent = answered + ' of 12 answered.'; }
+  else { msgEl.textContent = 'All answered — see your result below.'; }
+  if (answered === 12) showResult(total);
+}
+
+function showResult(total) {
+  var r = null;
+  for (var i = 0; i < RESULTS.length; i++) {
+    if (total >= RESULTS[i].min && total <= RESULTS[i].max) { r = RESULTS[i]; break; }
+  }
+  if (!r) return;
+  document.getElementById('result-score').textContent = total + ' / 36';
+  var lbl = document.getElementById('result-label');
+  lbl.textContent = r.label;
+  lbl.className = 'result-label ' + r.cls;
+  document.getElementById('result-desc').textContent = r.desc;
+  var block = document.getElementById('result-block');
+  block.classList.add('visible');
+  block.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function resetAll() {
+  scores = {};
+  document.querySelectorAll('.q-opt').forEach(function(b) {
+    b.classList.remove('sel-1','sel-2','sel-3');
+  });
+  document.getElementById('result-block').classList.remove('visible');
+  document.getElementById('score-num').textContent = '0 / 36';
+  document.getElementById('score-num').className = 'score-num';
+  document.getElementById('score-fill').style.width = '0%';
+  document.getElementById('score-fill').className = 'score-fill';
+  document.getElementById('score-msg').textContent = 'Answer questions to see your score.';
+}
+</script>
+</body>
+</html>
