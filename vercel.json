@@ -19,7 +19,7 @@
         { "key": "Vary", "value": "Accept-Encoding" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com; media-src 'self' https://res.cloudinary.com; connect-src 'self' https://app.helpmarq.com https://www.clarity.ms; frame-ancestors 'none';"
+          "value": "default-src 'self' https://helpmarq.com; script-src 'self' https://helpmarq.com 'unsafe-inline' https://www.clarity.ms; style-src 'self' https://helpmarq.com 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://helpmarq.com https://fonts.gstatic.com; img-src 'self' https://helpmarq.com data: https://res.cloudinary.com; media-src 'self' https://helpmarq.com https://res.cloudinary.com; connect-src 'self' https://helpmarq.com https://app.helpmarq.com https://www.clarity.ms; frame-ancestors 'none';"
         }
       ]
     },
