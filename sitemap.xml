@@ -106,8 +106,91 @@
   </url>
   <url>
     <loc>https://helpmarq.com/blog/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Pillar pages -->
+  <url>
+    <loc>https://helpmarq.com/blog/how-to-get-feedback-on-your-product.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/startup-validation-guide.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/user-research-guide-for-startups.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Cluster 1: Feedback spokes -->
+  <url>
+    <loc>https://helpmarq.com/blog/how-to-get-feedback-on-your-landing-page.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Cluster 2: Validation spokes -->
+  <url>
+    <loc>https://helpmarq.com/blog/how-to-validate-b2b-saas-idea.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/fake-door-mvp.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/product-market-fit-signals.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Cluster 3: User research spokes -->
+  <url>
+    <loc>https://helpmarq.com/blog/how-to-recruit-user-research-participants.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/unmoderated-vs-moderated-usability-testing.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Original blog posts -->
+  <url>
+    <loc>https://helpmarq.com/blog/free-website-feedback-tools.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/how-to-find-beta-testers.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/blog/usertesting-alternatives-free.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helpmarq.com/tools/landing-page-roast.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

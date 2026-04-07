@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Run a Fake Door MVP Test for Your Startup Idea (2026) — HelpMarq</title>
+<meta name="description" content="A fake door MVP lets you validate demand before building anything. Learn exactly how to set one up, what metrics to track, and how to interpret the results as a founder.">
+<meta name="keywords" content="fake door mvp, fake door test startup, fake door test, fake door landing page, pretotype test, demand validation before building, fake door experiment">
+<meta name="author" content="HelpMarq">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://helpmarq.com/blog/fake-door-mvp.html">
+<meta property="og:title" content="How to Run a Fake Door MVP Test for Your Startup Idea — HelpMarq">
+<meta property="og:description" content="Validate demand before writing a line of code. Here's the complete fake door MVP test playbook for founders.">
+<meta property="og:url" content="https://helpmarq.com/blog/fake-door-mvp.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HelpMarq">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nikolassapa">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" crossorigin="anonymous">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BlogPosting","headline":"How to Run a Fake Door MVP Test for Your Startup Idea (2026)","url":"https://helpmarq.com/blog/fake-door-mvp.html","datePublished":"2026-04-07","dateModified":"2026-04-07","author":{"@type":"Organization","name":"HelpMarq","url":"https://helpmarq.com"},"publisher":{"@type":"Organization","name":"HelpMarq","url":"https://helpmarq.com"},"description":"A complete guide to running a fake door MVP test — build a landing page, drive traffic, track conversion intent, and validate demand before writing a single line of code.","mainEntityOfPage":"https://helpmarq.com/blog/fake-door-mvp.html"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a fake door MVP?","acceptedAnswer":{"@type":"Answer","text":"A fake door MVP (also called a pretotype) is a landing page or feature button that looks real but doesn't work yet. When users click 'Sign Up' or 'Buy Now', they see a message explaining the product isn't available yet. Their click-through rate tells you whether real demand exists before you build anything."}},
+{"@type":"Question","name":"How is a fake door different from a landing page test?","acceptedAnswer":{"@type":"Answer","text":"A landing page test collects emails for a waitlist. A fake door test measures intent to act — clicking a purchase button or sign-up CTA — which is a much stronger signal of willingness to pay than just giving an email address."}},
+{"@type":"Question","name":"What conversion rate proves a fake door test is successful?","acceptedAnswer":{"@type":"Answer","text":"There's no universal benchmark, but most practitioners consider a fake door CTA conversion rate above 5% promising, above 10% strong, and above 20% exceptional. Compare against baseline industry landing page conversion rates (typically 2-5%) for context."}},
+{"@type":"Question","name":"Is a fake door test ethical?","acceptedAnswer":{"@type":"Answer","text":"Yes, as long as you are transparent. Show users a clear message immediately after they click explaining the product is in development and that their interest has been noted. Never charge a card or collect payment through a fake door."}},
+{"@type":"Question","name":"How long should you run a fake door test?","acceptedAnswer":{"@type":"Answer","text":"Run the test until you have at least 200–500 unique visitors and a minimum of 2 weeks of data to account for traffic variation. Less than 200 visitors gives you statistically unreliable conversion data."}}
+]},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://helpmarq.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://helpmarq.com/blog/"},{"@type":"ListItem","position":3,"name":"Fake Door MVP Test","item":"https://helpmarq.com/blog/fake-door-mvp.html"}]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0c0c0c;--s1:#111;--s2:#171717;--line:#202020;--line2:#2a2a2a;--white:#f0f0f0;--dim:#888;--dimmer:#4a4a4a;--accent:#e8943a;--accent-dim:rgba(232,148,58,.12)}
+html{font-size:16px;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--dim);font-family:'Outfit',sans-serif;line-height:1.7;min-height:100vh}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{color:var(--white);line-height:1.2;letter-spacing:-.025em;font-weight:700}
+p{color:var(--dim);line-height:1.78}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--line2)}
+nav{position:sticky;top:0;z-index:500;background:rgba(12,12,12,.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding:0 28px}
+.nav-in{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--white);letter-spacing:-.03em}
+.nav-brand img{width:28px;height:28px}
+.nav-back{font-size:13px;color:var(--dimmer)}.nav-back:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:#0c0c0c;font-size:13px;font-weight:700;padding:7px 16px}.nav-cta:hover{background:#d4832e}
+.wrap{max-width:780px;margin:0 auto;padding:0 28px}
+.article-hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+.eyebrow{display:block;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--dimmer);margin-bottom:16px}
+.article-hero h1{font-size:clamp(28px,4vw,44px);margin-bottom:20px}
+.article-meta{font-size:13px;color:var(--dimmer);display:flex;gap:20px;flex-wrap:wrap}
+.article-body{padding:48px 0 0}
+.article-body h2{font-size:24px;color:var(--white);margin:40px 0 14px}
+.article-body h3{font-size:18px;color:var(--white);margin:28px 0 10px}
+.article-body p{font-size:16px;color:var(--dim);margin-bottom:18px;line-height:1.78}
+.article-body ul,.article-body ol{margin:0 0 18px 20px;font-size:16px;color:var(--dim);line-height:1.78}
+.article-body li{margin-bottom:6px}
+.article-body strong{color:var(--white);font-weight:600}
+.article-body a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(232,148,58,.3)}.article-body a:hover{text-decoration-color:var(--accent)}
+.step-card{background:var(--s1);border:1px solid var(--line2);padding:24px 26px;margin:20px 0;border-left:3px solid var(--accent)}
+.step-num{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.step-title{font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px}
+.callout{background:var(--accent-dim);border-left:2px solid var(--accent);padding:16px 20px;margin:24px 0;font-size:15px;color:var(--dim)}
+.callout strong{color:var(--white)}
+.warning{background:rgba(224,85,85,.07);border-left:2px solid #e05555;padding:16px 20px;margin:24px 0;font-size:15px;color:var(--dim)}
+.warning strong{color:#e09090}
+.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.data-table th{background:var(--s2);color:var(--white);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--line2)}
+.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--dim)}
+.data-table tr:last-child td{border-bottom:none}
+.cta-block{background:var(--s1);border:1px solid var(--line2);padding:40px;margin:48px 0;text-align:center}
+.cta-block h2{font-size:22px;margin-bottom:10px;margin-top:0}
+.cta-block p{font-size:15px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto;color:var(--white)}
+.btn-accent{display:inline-block;background:var(--accent);color:#0c0c0c;font-size:15px;font-weight:700;padding:12px 28px;transition:background .15s}.btn-accent:hover{background:#d4832e}
+.related{border-top:1px solid var(--line);padding:40px 0}
+.related-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--dimmer);margin-bottom:20px}
+.related-links{display:flex;flex-direction:column;gap:10px}
+.related-link{font-size:15px;color:var(--white);display:flex;align-items:center;gap:8px;transition:color .15s}.related-link:hover{color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:32px 28px}
+.ft-in{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-copy{font-size:12px;color:var(--dimmer)}
+.ft-links{display:flex;gap:20px;flex-wrap:wrap}
+.ft-links a{font-size:12px;color:var(--dimmer);transition:color .14s}.ft-links a:hover{color:var(--white)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a href="/" class="nav-brand">
+      <img src="/favicon-32x32.png" alt="HelpMarq logo">
+      HelpMarq
+    </a>
+    <a href="/blog/" class="nav-back">← All articles</a>
+    <a href="/" class="nav-cta">Get feedback free →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="article-hero">
+    <span class="eyebrow">Startup Validation</span>
+    <h1>How to Run a Fake Door MVP Test for Your Startup Idea (2026)</h1>
+    <div class="article-meta">
+      <span>By HelpMarq</span>
+      <span>April 7, 2026</span>
+      <span>11 min read</span>
+    </div>
+  </header>
+
+  <article class="article-body">
+
+    <p>A fake door MVP is the fastest way to know whether anyone actually wants what you're building — before you write a single line of code. You build a page that looks and feels real, drive real traffic to it, and count how many people try to click through to a product that doesn't exist yet.</p>
+
+    <p>That click rate is your demand signal. It's more honest than surveys, more reliable than interviews, and faster than any other validation method available to a solo founder or small team.</p>
+
+    <p>This guide covers the exact steps to set one up, what traffic sources to use, what numbers to track, and how to interpret the results honestly.</p>
+
+    <h2>What is a fake door MVP test (and how it differs from a waitlist)?</h2>
+
+    <p>A <strong>fake door test</strong> — sometimes called a pretotype — is a minimal page that presents a product offer and includes a real-looking call-to-action button ("Sign Up", "Start Free Trial", "Get Access") that, when clicked, reveals the product doesn't exist yet.</p>
+
+    <p>Most commonly the user sees a message like: <em>"We're still building this. Enter your email and we'll notify you when it's ready."</em></p>
+
+    <p>The key difference from a standard waitlist or landing page is what you're measuring:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Validation method</th>
+          <th>What you measure</th>
+          <th>Signal strength</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Survey / poll</td>
+          <td>Stated interest ("Would you use this?")</td>
+          <td>Weak — people say yes to be polite</td>
+        </tr>
+        <tr>
+          <td>Waitlist landing page</td>
+          <td>Email signups</td>
+          <td>Medium — low friction, low commitment</td>
+        </tr>
+        <tr>
+          <td>Fake door MVP</td>
+          <td>CTA click-through rate</td>
+          <td>Strong — intent to take action</td>
+        </tr>
+        <tr>
+          <td>Pre-order / Letter of Intent</td>
+          <td>Willingness to pay</td>
+          <td>Strongest — actual monetary commitment</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The fake door sits in the middle of the validation spectrum — it's much faster to set up than a pre-order flow, and much more reliable than a survey.</p>
+
+    <h2>Step-by-step: How to run your fake door MVP test</h2>
+
+    <div class="step-card">
+      <div class="step-num">Step 1</div>
+      <div class="step-title">Define your hypothesis before you build anything</div>
+      <p style="color:var(--dim);margin-bottom:0">Write a one-sentence hypothesis: <em>"I believe [target user] will want [specific outcome] enough to click [specific CTA] at a rate of [X%]."</em> Define success and failure thresholds before you launch — otherwise you'll rationalize any result as a win.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 2</div>
+      <div class="step-title">Build a high-fidelity landing page (1–2 hours)</div>
+      <p style="color:var(--dim);margin-bottom:0">Use Framer, Webflow, Carrd, or raw HTML. Include: a specific headline with your primary benefit, 3–5 feature bullets, a pricing section (even a rough one), and a prominent CTA button. The page should look like a product that exists. Vague pages get vague data.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 3</div>
+      <div class="step-title">Wire the CTA button to your "fake door" reveal</div>
+      <p style="color:var(--dim);margin-bottom:0">When the user clicks, show a simple modal or redirect to a page that says: "You're early — we're still building this. Drop your email and we'll tell you when it's ready." Collect emails here. This is ethical as long as you don't charge anyone.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 4</div>
+      <div class="step-title">Install analytics and event tracking</div>
+      <p style="color:var(--dim);margin-bottom:0">Add Plausible, PostHog, or Google Analytics. Set up a custom event for CTA button clicks (not just page views). You need: unique visitors, CTA click events, and email submissions. That's it.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 5</div>
+      <div class="step-title">Drive targeted traffic — don't use random sources</div>
+      <p style="color:var(--dim);margin-bottom:0">Your traffic source must match your ICP. Posting in r/entrepreneur gives you noise, not signal. Target the communities where your actual potential customers spend time.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 6</div>
+      <div class="step-title">Run for 2 weeks minimum, then read the data honestly</div>
+      <p style="color:var(--dim);margin-bottom:0">Wait until you have at least 200–500 unique visitors before drawing conclusions. One day of traffic is not a test — it's a guess.</p>
+    </div>
+
+    <h2>The best traffic sources for fake door tests by ICP</h2>
+
+    <h3>If your ICP is indie hackers and solo founders</h3>
+    <ul>
+      <li><strong>Indie Hackers</strong> — share in "What are you working on?" threads</li>
+      <li><strong>Twitter/X</strong> — post a build-in-public update with a link</li>
+      <li><strong>ProductHunt Coming Soon</strong> — list as a "coming soon" product</li>
+    </ul>
+
+    <h3>If your ICP is SaaS buyers and B2B decision-makers</h3>
+    <ul>
+      <li><strong>LinkedIn organic posts</strong> — describe the problem you're solving, link to the page</li>
+      <li><strong>Relevant Slack communities</strong> (ProductLed Slack, RevGenius, etc.)</li>
+      <li><strong>Cold outreach</strong> — DM 50 people who match your ICP with a direct question</li>
+    </ul>
+
+    <h3>If your ICP is consumers</h3>
+    <ul>
+      <li><strong>Reddit</strong> — find the subreddit where your ICP vents about the exact problem you solve</li>
+      <li><strong>Facebook groups</strong> — niche interest groups, not broad entrepreneur groups</li>
+      <li><strong>Paid ads (small budget)</strong> — $50–100 in Meta ads to your target audience is the fastest way to get clean signal</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The most common fake door mistake:</strong> driving traffic from your own network. Your friends and followers are biased toward supporting you. Use cold traffic wherever possible — it's the only traffic that will tell you the truth.
+    </div>
+
+    <h2>What conversion rate means your idea has legs</h2>
+
+    <p>There's no universal threshold that guarantees product-market fit. But here's a practical benchmark framework:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>CTA click rate</th>
+          <th>Interpretation</th>
+          <th>What to do next</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Below 2%</td>
+          <td>Weak signal — likely a headline, positioning, or ICP problem</td>
+          <td>Rewrite headline and value prop; retest before pivoting</td>
+        </tr>
+        <tr>
+          <td>2–5%</td>
+          <td>Baseline — comparable to average landing pages</td>
+          <td>Improve the page; test different traffic sources</td>
+        </tr>
+        <tr>
+          <td>5–15%</td>
+          <td>Promising — clear demand signal from the right audience</td>
+          <td>Start customer interviews; consider pre-orders</td>
+        </tr>
+        <tr>
+          <td>15%+</td>
+          <td>Strong — rare; means you've hit a real pain point</td>
+          <td>Build fast; interview every person who clicked</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Context matters as much as the number. A 6% rate from 40 cold LinkedIn DMs to exact-ICP contacts beats a 12% rate from 500 visitors who came from your Twitter following.</p>
+
+    <h2>How to get qualitative signal alongside your click data</h2>
+
+    <p>Numbers tell you <em>what</em> happened. They don't tell you <em>why</em>. Pair your fake door data with three qualitative signals:</p>
+
+    <h3>1. Talk to everyone who dropped their email</h3>
+    <p>Email every person who signed up within 24 hours. Ask one question: <em>"What were you hoping this would do for you?"</em> Their answer is the raw material for your positioning and roadmap.</p>
+
+    <h3>2. Use an exit survey for non-clickers</h3>
+    <p>Add a simple on-exit survey using Hotjar, Tally, or a native popup: "What stopped you from signing up?" Even 10 responses will reveal the biggest objections your page fails to address.</p>
+
+    <h3>3. Get structured feedback on your landing page</h3>
+    <p>Before running paid traffic, get a critical read on your fake door page itself. <a href="https://helpmarq.com">HelpMarq</a> delivers structured written feedback from real people on your landing page copy, headline clarity, and CTA strength — so you know whether low conversion rates are a traffic problem or a page problem.</p>
+
+    <div class="callout">
+      <strong>Free tool:</strong> Run our <a href="/tools/landing-page-roast.html">Landing Page Roast Checklist</a> on your fake door page before driving traffic. It audits 30 elements across headline, value prop, social proof, CTA, and trust — and gives you a score with specific fixes.
+    </div>
+
+    <h2>What to do after your fake door test</h2>
+
+    <h3>If results were positive</h3>
+    <ol>
+      <li>Interview every email subscriber — start within 48 hours</li>
+      <li>Build the smallest possible version that delivers the core outcome</li>
+      <li>Consider a pre-order or Letter of Intent for B2B to validate willingness to pay</li>
+      <li>Keep the page live and keep collecting emails while you build</li>
+    </ol>
+
+    <h3>If results were negative</h3>
+    <ol>
+      <li>Don't quit — diagnose first. Was traffic qualified? Was the headline clear? Was the problem real?</li>
+      <li>Try a completely different framing of the same idea before pivoting</li>
+      <li>Talk to 10 people from your ICP who <em>didn't</em> click and ask why</li>
+      <li>If three different framings all fail, the problem may not be painkiller-level for your ICP</li>
+    </ol>
+
+    <div class="warning">
+      <strong>Don't pivot immediately after one failed test.</strong> The fake door page itself might be the problem, not the idea. Test at least 2–3 different headlines and value props before concluding there's no demand.
+    </div>
+
+    <h2>Frequently asked questions about fake door MVP tests</h2>
+
+    <h3>Is a fake door test ethical?</h3>
+    <p>Yes — as long as you are transparent immediately after the click. Show users a clear message that the product is in development. Never charge a card or run a real checkout through a fake door. The key is immediate disclosure.</p>
+
+    <h3>How long should I run the test?</h3>
+    <p>At least 2 weeks and at least 200–500 unique visitors. Less than that gives you data that's too noisy to act on.</p>
+
+    <h3>Can I run multiple fake door tests at once?</h3>
+    <p>Yes — test different positioning, different ICPs, or different pricing frames simultaneously on separate pages with separate traffic sources. Just don't mix traffic across pages or you'll confuse the signal.</p>
+
+    <h3>What if I get 500 visitors and zero clicks?</h3>
+    <p>First check your analytics to confirm the CTA button is actually rendering and clickable on mobile. Then look at traffic quality — where did those 500 visitors come from? If it was social media posts to your existing network, the traffic may not represent your ICP at all.</p>
+
+    <div class="cta-block">
+      <h2>Get unbiased feedback on your fake door page before you drive traffic</h2>
+      <p>HelpMarq delivers structured written feedback on your landing page — headline clarity, value prop strength, CTA friction — from real people in 48 hours. Free.</p>
+      <a href="https://helpmarq.com" class="btn-accent">Submit your page for feedback →</a>
+    </div>
+
+    <div class="related">
+      <div class="related-label">Related articles</div>
+      <div class="related-links">
+        <a href="/blog/startup-validation-guide.html" class="related-link">→ The Complete Startup Validation Guide (2026)</a>
+        <a href="/blog/how-to-validate-b2b-saas-idea.html" class="related-link">→ How to Validate a B2B SaaS Idea Before You Build</a>
+        <a href="/blog/product-market-fit-signals.html" class="related-link">→ 7 Product-Market Fit Signals Founders Actually Measure</a>
+        <a href="/blog/how-to-get-feedback-on-your-product.html" class="related-link">→ How to Get Feedback on Your Product (The Complete Guide)</a>
+        <a href="/tools/landing-page-roast.html" class="related-link">→ Free Landing Page Roast Checklist Tool</a>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="ft-in">
+    <span class="ft-copy">© 2026 HelpMarq. All rights reserved.</span>
+    <div class="ft-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
